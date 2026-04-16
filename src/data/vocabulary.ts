@@ -9,7 +9,23 @@ export interface VocabWord {
   category: string;
 }
 
-const img = (id: string) => `https://images.unsplash.com/${id}?w=400&h=300&fit=crop`;
+// Use Loremflickr keyword search — always returns a real photo matching the keyword.
+// Reliable, free, no API key required, and always returns 200.
+const img = (keyword: string, seed?: string) => {
+  const kw = encodeURIComponent(keyword.trim().toLowerCase());
+  const s = encodeURIComponent(seed || keyword);
+  return `https://loremflickr.com/400/300/${kw}?lock=${hashCode(s)}`;
+};
+
+// Simple deterministic hash so each word always gets the same image
+function hashCode(str: string): number {
+  let h = 0;
+  for (let i = 0; i < str.length; i++) {
+    h = ((h << 5) - h) + str.charCodeAt(i);
+    h |= 0;
+  }
+  return Math.abs(h) % 1000;
+}
 
 export const vocabulary: VocabWord[] = [
   // ============================================================
