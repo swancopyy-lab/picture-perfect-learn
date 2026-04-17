@@ -223,7 +223,7 @@ export const vocabulary: VocabWord[] = [
   // UNIT 12 — Culture Shock
   // ============================================================
   { id: "u12-break", word: "break", type: "noun", meaningEn: "A short rest or pause", meaningAr: "استراحة", example: "Let's take a short break.", image: img("photo-1495474472287-4d71bcdd2085"), category: "12 - Culture Shock" },
-  { id: "u12-chopsticks", word: "chopsticks", type: "noun", meaningEn: "Pair of sticks used to eat in Asian cultures", meaningAr: "عيدان الطعام", example: "Can you eat with chopsticks?", image: img("photo-1526318896980-cf78c088247c"), category: "12 - Culture Shock" },
+  { id: "u12-chopsticks", word: "chopsticks", type: "noun", meaningEn: "Pair of sticks used to eat in Asian cultures", meaningAr: "عيدان الطعام", example: "Can you eat with chopsticks?", image: img("photo-1674916287402-33dec2d60cf6"), category: "12 - Culture Shock" },
   { id: "u12-custom", word: "custom", type: "noun", meaningEn: "A traditional way of behaving", meaningAr: "عادة / تقليد", example: "It's a custom to remove your shoes here.", image: img("photo-1528360983277-13d401cdc186"), category: "12 - Culture Shock" },
   { id: "u12-dust", word: "dust", type: "noun", meaningEn: "Fine particles of dirt", meaningAr: "غبار", example: "The shelves are covered in dust.", image: img("photo-1581578731548-c64695cc6952"), category: "12 - Culture Shock" },
   { id: "u12-graduate", word: "graduate", type: "noun", meaningEn: "Someone who completed a degree", meaningAr: "خريج", example: "She's a recent graduate of the university.", image: img("photo-1523050854058-8df90110c9f1"), category: "12 - Culture Shock" },
