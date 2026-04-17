@@ -1,7 +1,7 @@
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Home, RotateCcw, Volume2, Delete } from "lucide-react";
+import { Home, Volume2, Delete } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { vocabulary, speakWord } from "@/data/vocabulary";
 
@@ -17,11 +17,25 @@ function shuffle<T>(arr: T[]): T[] {
 // Use words with simpler spelling (single words, not phrases)
 const spellingWords = vocabulary.filter(w => !w.word.includes(" ") && !w.word.includes("…") && !w.word.includes("?") && !w.word.includes("!") && !w.word.includes("'") && w.word.length <= 12);
 
+// Pick which letter positions to reveal as hints (about 1/3 of letters)
+function pickHintPositions(length: number): Set<number> {
+  const hintCount = Math.max(1, Math.floor(length / 3));
+  const positions = new Set<number>();
+  // Always reveal the first letter as a starter hint
+  positions.add(0);
+  // Then add random additional hints
+  while (positions.size < hintCount + 1 && positions.size < length - 1) {
+    positions.add(Math.floor(Math.random() * length));
+  }
+  return positions;
+}
+
 const SpellingGame = () => {
   const navigate = useNavigate();
   const [wordList] = useState(() => shuffle(spellingWords));
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [userInput, setUserInput] = useState<string[]>([]);
+  const [userInput, setUserInput] = useState<(string | null)[]>([]);
+  const [hintPositions, setHintPositions] = useState<Set<number>>(new Set());
   const [availableLetters, setAvailableLetters] = useState<{ letter: string; used: boolean; idx: number }[]>([]);
   const [status, setStatus] = useState<"playing" | "correct" | "wrong">("playing");
   const [score, setScore] = useState(0);
@@ -29,42 +43,86 @@ const SpellingGame = () => {
   const current = wordList[currentIndex];
   const targetWord = current?.word.toLowerCase() || "";
 
-  useMemo(() => {
-    const letters = targetWord.split("").map((l, i) => ({ letter: l, used: false, idx: i }));
-    // Add some random extra letters
+  // Setup the puzzle whenever the target word changes
+  useEffect(() => {
+    if (!targetWord) return;
+    const hints = pickHintPositions(targetWord.length);
+    setHintPositions(hints);
+
+    // Pre-fill the hint positions in user input, leave the rest as null
+    const initialInput: (string | null)[] = targetWord.split("").map((l, i) =>
+      hints.has(i) ? l : null
+    );
+    setUserInput(initialInput);
+
+    // Build the letters to choose from = remaining letters + a few extras
+    const remainingLetters: string[] = [];
+    targetWord.split("").forEach((l, i) => {
+      if (!hints.has(i)) remainingLetters.push(l);
+    });
     const extras = "abcdefghijklmnopqrstuvwxyz";
-    const extraCount = Math.min(4, Math.max(2, 8 - targetWord.length));
+    const extraCount = Math.min(3, Math.max(2, 6 - remainingLetters.length));
     for (let i = 0; i < extraCount; i++) {
-      letters.push({ letter: extras[Math.floor(Math.random() * extras.length)], used: false, idx: targetWord.length + i });
+      remainingLetters.push(extras[Math.floor(Math.random() * extras.length)]);
     }
+    const letters = remainingLetters.map((letter, idx) => ({ letter, used: false, idx }));
     setAvailableLetters(shuffle(letters));
-    setUserInput([]);
     setStatus("playing");
   }, [targetWord]);
 
-  const handleLetterClick = useCallback((idx: number) => {
-    if (status !== "playing") return;
-    setAvailableLetters(prev => prev.map(l => l.idx === idx ? { ...l, used: true } : l));
-    const letter = availableLetters.find(l => l.idx === idx)?.letter || "";
-    const newInput = [...userInput, letter];
-    setUserInput(newInput);
+  // Find the next empty (non-hint) slot index
+  const nextEmptyIndex = useMemo(() => {
+    for (let i = 0; i < userInput.length; i++) {
+      if (!hintPositions.has(i) && userInput[i] === null) return i;
+    }
+    return -1;
+  }, [userInput, hintPositions]);
 
-    if (newInput.length === targetWord.length) {
-      const isCorrect = newInput.join("") === targetWord;
+  // Check completion
+  useEffect(() => {
+    if (userInput.length === 0 || status !== "playing") return;
+    if (userInput.every(c => c !== null)) {
+      const isCorrect = userInput.join("") === targetWord;
       setStatus(isCorrect ? "correct" : "wrong");
       if (isCorrect) setScore(s => s + 1);
     }
-  }, [status, availableLetters, userInput, targetWord]);
+  }, [userInput, targetWord, status]);
+
+  const handleLetterClick = useCallback((idx: number) => {
+    if (status !== "playing") return;
+    if (nextEmptyIndex === -1) return;
+    const letter = availableLetters.find(l => l.idx === idx)?.letter;
+    if (!letter) return;
+    setAvailableLetters(prev => prev.map(l => l.idx === idx ? { ...l, used: true } : l));
+    setUserInput(prev => {
+      const copy = [...prev];
+      copy[nextEmptyIndex] = letter;
+      return copy;
+    });
+  }, [status, availableLetters, nextEmptyIndex]);
 
   const handleDelete = () => {
-    if (userInput.length === 0 || status !== "playing") return;
-    const lastLetter = userInput[userInput.length - 1];
-    setUserInput(prev => prev.slice(0, -1));
-    // Unmark one matching used letter
+    if (status !== "playing") return;
+    // Find the last filled non-hint slot
+    let lastFilled = -1;
+    for (let i = userInput.length - 1; i >= 0; i--) {
+      if (!hintPositions.has(i) && userInput[i] !== null) {
+        lastFilled = i;
+        break;
+      }
+    }
+    if (lastFilled === -1) return;
+    const letter = userInput[lastFilled];
+    setUserInput(prev => {
+      const copy = [...prev];
+      copy[lastFilled] = null;
+      return copy;
+    });
+    // Free up one used letter that matches
     setAvailableLetters(prev => {
       let found = false;
       return prev.map(l => {
-        if (!found && l.used && l.letter === lastLetter) {
+        if (!found && l.used && l.letter === letter) {
           found = true;
           return { ...l, used: false };
         }
@@ -78,6 +136,8 @@ const SpellingGame = () => {
   };
 
   if (!current) return null;
+
+  const hasUserInput = userInput.some((c, i) => !hintPositions.has(i) && c !== null);
 
   return (
     <div className="min-h-screen bg-background px-4 py-6">
@@ -95,12 +155,14 @@ const SpellingGame = () => {
 
         {/* Image & Audio */}
         <div className="bg-card rounded-2xl card-shadow p-4 mb-6 text-center">
-          <img
-            src={current.image}
-            alt="Spell this word"
-            className="w-full h-40 object-cover rounded-xl mb-4"
-            loading="lazy"
-          />
+          <div className="w-full h-40 rounded-xl mb-4 bg-muted flex items-center justify-center overflow-hidden">
+            <img
+              src={current.image}
+              alt="Spell this word"
+              className="max-w-full max-h-full object-contain"
+              loading="lazy"
+            />
+          </div>
           <Button
             variant="outline"
             size="sm"
@@ -113,23 +175,29 @@ const SpellingGame = () => {
 
         {/* Letter Boxes */}
         <div className="flex items-center justify-center gap-2 mb-6 flex-wrap">
-          {targetWord.split("").map((_, i) => (
-            <div
-              key={i}
-              className={`w-10 h-12 rounded-lg border-2 flex items-center justify-center text-xl font-heading font-bold transition-all ${
-                userInput[i]
-                  ? status === "correct"
-                    ? "border-success bg-success/10 text-success"
-                    : status === "wrong"
-                    ? "border-destructive bg-destructive/10 text-destructive"
-                    : "border-primary bg-primary/10 text-foreground"
-                  : "border-border bg-card"
-              }`}
-            >
-              {userInput[i] || ""}
-            </div>
-          ))}
-          {status === "playing" && userInput.length > 0 && (
+          {targetWord.split("").map((_, i) => {
+            const isHint = hintPositions.has(i);
+            const filled = userInput[i];
+            return (
+              <div
+                key={i}
+                className={`w-10 h-12 rounded-lg border-2 flex items-center justify-center text-xl font-heading font-bold transition-all ${
+                  isHint
+                    ? "border-secondary bg-secondary/20 text-foreground"
+                    : filled
+                    ? status === "correct"
+                      ? "border-success bg-success/10 text-success"
+                      : status === "wrong"
+                      ? "border-destructive bg-destructive/10 text-destructive"
+                      : "border-primary bg-primary/10 text-foreground"
+                    : "border-border bg-card border-dashed"
+                }`}
+              >
+                {filled || ""}
+              </div>
+            );
+          })}
+          {status === "playing" && hasUserInput && (
             <Button variant="ghost" size="icon" onClick={handleDelete} className="ml-1">
               <Delete className="h-5 w-5" />
             </Button>

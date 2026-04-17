@@ -98,12 +98,14 @@ const Flashcards = () => {
                 className="bg-card rounded-2xl card-shadow p-6 flex flex-col items-center text-center"
                 style={{ minHeight: 380 }}
               >
-                <img
-                  src={current.image}
-                  alt={current.word}
-                  className="w-full h-36 object-cover rounded-xl mb-4"
-                  loading="lazy"
-                />
+                <div className="w-full h-40 rounded-xl mb-4 bg-muted flex items-center justify-center overflow-hidden">
+                  <img
+                    src={current.image}
+                    alt={current.word}
+                    className="max-w-full max-h-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
                 <h3 className="text-lg font-heading font-bold text-foreground mb-1">{current.meaningEn}</h3>
                 <p className="text-lg font-body text-primary font-semibold mb-3" dir="rtl">{current.meaningAr}</p>
                 <p className="text-sm text-muted-foreground font-body italic mb-4">"{current.example}"</p>

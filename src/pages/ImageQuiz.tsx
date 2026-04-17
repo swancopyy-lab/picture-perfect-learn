@@ -112,12 +112,14 @@ const ImageQuiz = () => {
                 onClick={() => handleSelect(opt.id)}
                 className={`relative rounded-xl overflow-hidden border-2 ${borderClass} transition-all bg-card`}
               >
-                <img
-                  src={opt.image}
-                  alt="option"
-                  className="w-full h-32 object-cover"
-                  loading="lazy"
-                />
+                <div className="w-full h-32 bg-muted flex items-center justify-center overflow-hidden">
+                  <img
+                    src={opt.image}
+                    alt="option"
+                    className="max-w-full max-h-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
                 {selected && isCorrect && (
                   <div className="absolute top-2 right-2">
                     <CheckCircle2 className="h-6 w-6 text-success drop-shadow" />
