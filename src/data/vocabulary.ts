@@ -9,7 +9,7 @@ export interface VocabWord {
   category: string;
 }
 
-const img = (id: string) => `https://images.unsplash.com/${id}?w=400&h=300&fit=crop`;
+const img = (id: string) => `https://images.unsplash.com/${id}?w=600&q=80&auto=format`;
 
 export const vocabulary: VocabWord[] = [
   // ============================================================
