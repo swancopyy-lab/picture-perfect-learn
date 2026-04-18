@@ -293,11 +293,77 @@ export function getWordsByCategory(category: string): VocabWord[] {
   return vocabulary.filter((w) => w.category === category);
 }
 
-export function speakWord(text: string, lang: string = "en-US"): void {
+// Cache for dictionary audio URLs (null = checked, no audio available)
+const audioCache = new Map<string, string | null>();
+let currentAudio: HTMLAudioElement | null = null;
+
+function fallbackSpeak(text: string, lang: string): void {
   if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
   window.speechSynthesis.cancel();
   const utter = new SpeechSynthesisUtterance(text);
   utter.lang = lang;
   utter.rate = 0.9;
   window.speechSynthesis.speak(utter);
+}
+
+function stopAll(): void {
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio = null;
+  }
+  if (typeof window !== "undefined" && "speechSynthesis" in window) {
+    window.speechSynthesis.cancel();
+  }
+}
+
+async function fetchDictionaryAudio(word: string): Promise<string | null> {
+  const key = word.toLowerCase();
+  if (audioCache.has(key)) return audioCache.get(key)!;
+  try {
+    const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(key)}`);
+    if (!res.ok) {
+      audioCache.set(key, null);
+      return null;
+    }
+    const data = await res.json();
+    let audioUrl: string | null = null;
+    for (const entry of data) {
+      for (const ph of entry.phonetics || []) {
+        if (ph.audio && typeof ph.audio === "string" && ph.audio.length > 0) {
+          audioUrl = ph.audio.startsWith("//") ? `https:${ph.audio}` : ph.audio;
+          break;
+        }
+      }
+      if (audioUrl) break;
+    }
+    audioCache.set(key, audioUrl);
+    return audioUrl;
+  } catch {
+    audioCache.set(key, null);
+    return null;
+  }
+}
+
+export function speakWord(text: string, lang: string = "en-US"): void {
+  if (typeof window === "undefined") return;
+  stopAll();
+
+  const trimmed = text.trim();
+  // Only try dictionary for single English words (letters/hyphen only)
+  const isSingleEnglishWord = /^[a-zA-Z][a-zA-Z'-]*$/.test(trimmed) && lang.startsWith("en");
+
+  if (!isSingleEnglishWord) {
+    fallbackSpeak(text, lang);
+    return;
+  }
+
+  fetchDictionaryAudio(trimmed).then((url) => {
+    if (url) {
+      const audio = new Audio(url);
+      currentAudio = audio;
+      audio.play().catch(() => fallbackSpeak(text, lang));
+    } else {
+      fallbackSpeak(text, lang);
+    }
+  });
 }
