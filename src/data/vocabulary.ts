@@ -1,3 +1,7 @@
+import gloveCompartmentImg from "@/assets/glove-compartment.jpg";
+import gasTankImg from "@/assets/gas-tank.jpg";
+import wellExamImg from "@/assets/well-exam.jpg";
+
 export interface VocabWord {
   id: string;
   word: string;
@@ -10,6 +14,7 @@ export interface VocabWord {
 }
 
 const img = (id: string) => `https://images.unsplash.com/${id}?w=600&q=80&auto=format`;
+const vec = (id: string) => `https://images.unsplash.com/vector-${id}?w=600&q=80&auto=format`;
 
 export const vocabulary: VocabWord[] = [
   // ============================================================
