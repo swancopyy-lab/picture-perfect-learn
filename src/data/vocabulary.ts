@@ -316,11 +316,14 @@ function stopAll(): void {
   }
 }
 
-async function fetchDictionaryAudio(word: string): Promise<string | null> {
+async function fetchDictionaryAudio(word: string, timeoutMs = 1200): Promise<string | null> {
   const key = word.toLowerCase();
   if (audioCache.has(key)) return audioCache.get(key)!;
   try {
-    const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(key)}`);
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+    const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(key)}`, { signal: ctrl.signal });
+    clearTimeout(timer);
     if (!res.ok) {
       audioCache.set(key, null);
       return null;
@@ -344,12 +347,19 @@ async function fetchDictionaryAudio(word: string): Promise<string | null> {
   }
 }
 
+// Prefetch audio in the background so it's cached for instant playback later
+export function prefetchAudio(text: string): void {
+  const trimmed = text.trim();
+  if (/^[a-zA-Z][a-zA-Z'-]*$/.test(trimmed)) {
+    fetchDictionaryAudio(trimmed, 5000).catch(() => {});
+  }
+}
+
 export function speakWord(text: string, lang: string = "en-US"): void {
   if (typeof window === "undefined") return;
   stopAll();
 
   const trimmed = text.trim();
-  // Only try dictionary for single English words (letters/hyphen only)
   const isSingleEnglishWord = /^[a-zA-Z][a-zA-Z'-]*$/.test(trimmed) && lang.startsWith("en");
 
   if (!isSingleEnglishWord) {
@@ -357,7 +367,10 @@ export function speakWord(text: string, lang: string = "en-US"): void {
     return;
   }
 
-  fetchDictionaryAudio(trimmed).then((url) => {
+  const key = trimmed.toLowerCase();
+  // If cached, play instantly
+  if (audioCache.has(key)) {
+    const url = audioCache.get(key)!;
     if (url) {
       const audio = new Audio(url);
       currentAudio = audio;
@@ -365,5 +378,11 @@ export function speakWord(text: string, lang: string = "en-US"): void {
     } else {
       fallbackSpeak(text, lang);
     }
-  });
+    return;
+  }
+
+  // Not cached: speak via Web Speech immediately so user hears something now,
+  // and prefetch dictionary audio for next time.
+  fallbackSpeak(text, lang);
+  fetchDictionaryAudio(trimmed, 5000).catch(() => {});
 }
