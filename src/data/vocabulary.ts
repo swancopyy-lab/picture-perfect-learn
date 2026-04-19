@@ -1,3 +1,7 @@
+import gloveCompartmentImg from "@/assets/glove-compartment.jpg";
+import gasTankImg from "@/assets/gas-tank.jpg";
+import wellExamImg from "@/assets/well-exam.jpg";
+
 export interface VocabWord {
   id: string;
   word: string;
@@ -10,6 +14,7 @@ export interface VocabWord {
 }
 
 const img = (id: string) => `https://images.unsplash.com/${id}?w=600&q=80&auto=format`;
+const vec = (id: string) => `https://images.unsplash.com/vector-${id}?w=600&q=80&auto=format`;
 
 export const vocabulary: VocabWord[] = [
   // ============================================================
@@ -55,43 +60,43 @@ export const vocabulary: VocabWord[] = [
   // ============================================================
   // UNIT 8 — Drive Slowly!
   // ============================================================
-  { id: "u8-automatic-transmission", word: "automatic transmission", type: "noun", meaningEn: "A gear system that shifts on its own", meaningAr: "ناقل حركة أوتوماتيكي", example: "Most new cars have automatic transmission.", image: img("photo-1492144534655-ae79c964c9d7"), category: "8 - Drive Slowly!" },
-  { id: "u8-brake-pedal", word: "brake pedal", type: "noun", meaningEn: "Pedal pressed to slow or stop a car", meaningAr: "دواسة الفرامل", example: "Press the brake pedal slowly.", image: img("photo-1503376780353-7e6692767b70"), category: "8 - Drive Slowly!" },
-  { id: "u8-bumper", word: "bumper", type: "noun", meaningEn: "Bar at the front/back of a car for protection", meaningAr: "صادم / مصدّ السيارة", example: "The bumper protects the car in small accidents.", image: img("photo-1485291571150-772bcfc10da5"), category: "8 - Drive Slowly!" },
-  { id: "u8-dashboard", word: "dashboard", type: "noun", meaningEn: "Panel with controls in front of the driver", meaningAr: "لوحة القيادة", example: "The fuel light on the dashboard is on.", image: img("photo-1449965408869-eaa3f722e40d"), category: "8 - Drive Slowly!" },
-  { id: "u8-exterior", word: "exterior", type: "noun", meaningEn: "The outside of something", meaningAr: "الجزء الخارجي", example: "The car's exterior is bright red.", image: img("photo-1553440569-bcc63803a83d"), category: "8 - Drive Slowly!" },
-  { id: "u8-gas-pedal", word: "gas pedal", type: "noun", meaningEn: "Pedal pressed to make the car go faster", meaningAr: "دواسة الوقود", example: "He pressed the gas pedal to speed up.", image: img("photo-1581235720704-06d3acfcb36f"), category: "8 - Drive Slowly!" },
-  { id: "u8-gas-tank", word: "gas tank", type: "noun", meaningEn: "Container that holds fuel in a car", meaningAr: "خزان الوقود", example: "The gas tank is almost empty.", image: img("photo-1545459720-aac8509eb02c"), category: "8 - Drive Slowly!" },
-  { id: "u8-glove-compartment", word: "glove compartment", type: "noun", meaningEn: "Small storage area in front of the passenger seat", meaningAr: "صندوق القفازات / درج الأمامي", example: "The map is in the glove compartment.", image: img("photo-1494976388531-d1058494cdd8"), category: "8 - Drive Slowly!" },
-  { id: "u8-gps", word: "GPS", type: "noun", meaningEn: "Device that gives directions using satellites", meaningAr: "جهاز تحديد المواقع", example: "Use the GPS to find the address.", image: img("photo-1581090700227-1e37b190418e"), category: "8 - Drive Slowly!" },
-  { id: "u8-headlight", word: "headlight", type: "noun", meaningEn: "Front light on a vehicle", meaningAr: "المصباح الأمامي", example: "Turn on your headlights at night.", image: img("photo-1494976388531-d1058494cdd8"), category: "8 - Drive Slowly!" },
-  { id: "u8-highway", word: "highway", type: "noun", meaningEn: "A main public road for fast travel", meaningAr: "طريق سريع", example: "We drove fast on the highway.", image: img("photo-1502920917128-1aa500764cbd"), category: "8 - Drive Slowly!" },
-  { id: "u8-hood", word: "hood", type: "noun", meaningEn: "Cover over a car's engine", meaningAr: "غطاء محرك السيارة", example: "He opened the hood to check the engine.", image: img("photo-1493238792000-8113da705763"), category: "8 - Drive Slowly!" },
-  { id: "u8-ignition", word: "ignition", type: "noun", meaningEn: "Switch that starts the car engine", meaningAr: "مفتاح تشغيل السيارة", example: "Put the key in the ignition.", image: img("photo-1542362567-b07e54358753"), category: "8 - Drive Slowly!" },
-  { id: "u8-interior", word: "interior", type: "noun", meaningEn: "The inside of something", meaningAr: "الجزء الداخلي", example: "The car has a leather interior.", image: img("photo-1503376780353-7e6692767b70"), category: "8 - Drive Slowly!" },
-  { id: "u8-pedestrian", word: "pedestrian", type: "noun", meaningEn: "A person walking on a street", meaningAr: "أحد المشاة", example: "Always watch for pedestrians.", image: img("photo-1519121783988-d365dad5c87c"), category: "8 - Drive Slowly!" },
-  { id: "u8-rearview-mirror", word: "rearview mirror", type: "noun", meaningEn: "Mirror used to see behind the car", meaningAr: "مرآة الرؤية الخلفية", example: "Check the rearview mirror before turning.", image: img("photo-1553440569-bcc63803a83d"), category: "8 - Drive Slowly!" },
-  { id: "u8-road-sign", word: "road sign", type: "noun", meaningEn: "A sign that gives information to drivers", meaningAr: "إشارة طريق", example: "Obey every road sign.", image: img("photo-1473445730015-841f29a9490b"), category: "8 - Drive Slowly!" },
-  { id: "u8-seat-belt", word: "seat belt", type: "noun", meaningEn: "A safety strap worn in vehicles", meaningAr: "حزام الأمان", example: "Always wear your seat belt.", image: img("photo-1485291571150-772bcfc10da5"), category: "8 - Drive Slowly!" },
-  { id: "u8-signal-light", word: "signal light", type: "noun", meaningEn: "Light used to show direction of turn", meaningAr: "إشارة الانعطاف", example: "Use the signal light before turning.", image: img("photo-1492144534655-ae79c964c9d7"), category: "8 - Drive Slowly!" },
-  { id: "u8-speed-limit", word: "speed limit", type: "noun", meaningEn: "Maximum legal driving speed", meaningAr: "السرعة القصوى المسموحة", example: "The speed limit here is 60.", image: img("photo-1473445730015-841f29a9490b"), category: "8 - Drive Slowly!" },
-  { id: "u8-steering-wheel", word: "steering wheel", type: "noun", meaningEn: "Wheel used to steer a vehicle", meaningAr: "عجلة القيادة", example: "Keep both hands on the steering wheel.", image: img("photo-1542362567-b07e54358753"), category: "8 - Drive Slowly!" },
-  { id: "u8-ticket", word: "ticket", type: "noun", meaningEn: "Official notice of a traffic offense", meaningAr: "مخالفة مرورية", example: "He got a ticket for speeding.", image: img("photo-1593115057322-e94b77572f20"), category: "8 - Drive Slowly!" },
-  { id: "u8-trunk", word: "trunk", type: "noun", meaningEn: "Storage space at the back of a car", meaningAr: "صندوق السيارة الخلفي", example: "Put the bags in the trunk.", image: img("photo-1565043666747-69f6646db940"), category: "8 - Drive Slowly!" },
-  { id: "u8-windshield", word: "windshield", type: "noun", meaningEn: "Front window of a vehicle", meaningAr: "الزجاج الأمامي للسيارة", example: "A rock cracked the windshield.", image: img("photo-1493238792000-8113da705763"), category: "8 - Drive Slowly!" },
-  { id: "u8-windshield-wipers", word: "windshield wipers", type: "noun", meaningEn: "Blades that clean the windshield", meaningAr: "ماسحات الزجاج", example: "Turn on the windshield wipers in the rain.", image: img("photo-1517940310602-26535839fe84"), category: "8 - Drive Slowly!" },
-  { id: "u8-obey", word: "obey", type: "verb", meaningEn: "To follow rules or commands", meaningAr: "يُطيع", example: "Obey the traffic laws.", image: img("photo-1473445730015-841f29a9490b"), category: "8 - Drive Slowly!" },
-  { id: "u8-pass", word: "pass", type: "verb", meaningEn: "To move past something", meaningAr: "يتجاوز", example: "Don't pass the car on this road.", image: img("photo-1502920917128-1aa500764cbd"), category: "8 - Drive Slowly!" },
-  { id: "u8-speed", word: "speed", type: "verb", meaningEn: "To drive faster than the legal limit", meaningAr: "يُسرع", example: "Don't speed in the city.", image: img("photo-1502161254066-6c74afbf07aa"), category: "8 - Drive Slowly!" },
-  { id: "u8-watch-out", word: "watch out", type: "verb", meaningEn: "Be careful; pay attention", meaningAr: "انتبه / احذر", example: "Watch out for that car!", image: img("photo-1517242810446-cc8951b2be40"), category: "8 - Drive Slowly!" },
-  { id: "u8-carefully", word: "carefully", type: "adverb", meaningEn: "In a cautious way", meaningAr: "بحذر", example: "Drive carefully in the rain.", image: img("photo-1502161254066-6c74afbf07aa"), category: "8 - Drive Slowly!" },
-  { id: "u8-slowly", word: "slowly", type: "adverb", meaningEn: "At a low speed", meaningAr: "ببطء", example: "Walk slowly across the street.", image: img("photo-1519635694634-90c0c0eebe88"), category: "8 - Drive Slowly!" },
-  { id: "u8-well", word: "well", type: "adverb", meaningEn: "In a good or skilled way", meaningAr: "بشكل جيد", example: "She drives very well.", image: img("photo-1542362567-b07e54358753"), category: "8 - Drive Slowly!" },
-  { id: "u8-in-a-hurry", word: "in a hurry", type: "expression", meaningEn: "Doing something quickly because there's little time", meaningAr: "في عجلة من أمره", example: "Sorry, I'm in a hurry.", image: img("photo-1518288774672-b94e808873ff"), category: "8 - Drive Slowly!" },
-  { id: "u8-run-into-traffic", word: "run into traffic", type: "expression", meaningEn: "To suddenly get stuck in traffic", meaningAr: "يقع في زحام مروري", example: "We ran into traffic on the way home.", image: img("photo-1502920917128-1aa500764cbd"), category: "8 - Drive Slowly!" },
-  { id: "u8-hey", word: "Hey!", type: "expression", meaningEn: "Used to get someone's attention", meaningAr: "مهلاً! / يا!", example: "Hey! Watch where you're going.", image: img("photo-1504593811423-6dd665756598"), category: "8 - Drive Slowly!" },
-  { id: "u8-im-doing-60", word: "I'm doing 60.", type: "expression", meaningEn: "I'm driving at 60 mph/kph", meaningAr: "أنا أسير بسرعة 60", example: "Don't worry, I'm doing 60.", image: img("photo-1449965408869-eaa3f722e40d"), category: "8 - Drive Slowly!" },
-  { id: "u8-cant-be-serious", word: "You can't be serious!", type: "expression", meaningEn: "You must be joking", meaningAr: "لا يمكن أن تكون جاداً!", example: "Pay $500? You can't be serious!", image: img("photo-1499617471673-c4ebd6a3b62f"), category: "8 - Drive Slowly!" },
+  { id: "u8-automatic-transmission", word: "automatic transmission", type: "noun", meaningEn: "A gear system that shifts on its own", meaningAr: "ناقل حركة أوتوماتيكي", example: "Most new cars have automatic transmission.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Kia_Opirus_Automatic_Transmission_Shifter.JPG/640px-Kia_Opirus_Automatic_Transmission_Shifter.JPG", category: "8 - Drive Slowly!" },
+  { id: "u8-brake-pedal", word: "brake pedal", type: "noun", meaningEn: "Pedal pressed to slow or stop a car", meaningAr: "دواسة الفرامل", example: "Press the brake pedal slowly.", image: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Saabsonettpedals.jpg", category: "8 - Drive Slowly!" },
+  { id: "u8-bumper", word: "bumper", type: "noun", meaningEn: "Bar at the front/back of a car for protection", meaningAr: "صادم / مصدّ السيارة", example: "The bumper protects the car in small accidents.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/1976_AMC_Matador_coupe_cocoa_fl-bu.jpg/960px-1976_AMC_Matador_coupe_cocoa_fl-bu.jpg", category: "8 - Drive Slowly!" },
+  { id: "u8-dashboard", word: "dashboard", type: "noun", meaningEn: "Panel with controls in front of the driver", meaningAr: "لوحة القيادة", example: "The fuel light on the dashboard is on.", image: img("photo-1615517331072-da8aab44f923"), category: "8 - Drive Slowly!" },
+  { id: "u8-exterior", word: "exterior", type: "noun", meaningEn: "The outside of something", meaningAr: "الجزء الخارجي", example: "The car's exterior is bright red.", image: img("photo-1580273916550-e323be2ae537"), category: "8 - Drive Slowly!" },
+  { id: "u8-gas-pedal", word: "gas pedal", type: "noun", meaningEn: "Pedal pressed to make the car go faster", meaningAr: "دواسة الوقود", example: "He pressed the gas pedal to speed up.", image: img("photo-1774977866250-89aec8731911"), category: "8 - Drive Slowly!" },
+  { id: "u8-gas-tank", word: "gas tank", type: "noun", meaningEn: "Container that holds fuel in a car", meaningAr: "خزان الوقود", example: "The gas tank is almost empty.", image: gasTankImg, category: "8 - Drive Slowly!" },
+  { id: "u8-glove-compartment", word: "glove compartment", type: "noun", meaningEn: "Small storage area in front of the passenger seat", meaningAr: "صندوق القفازات / درج الأمامي", example: "The map is in the glove compartment.", image: gloveCompartmentImg, category: "8 - Drive Slowly!" },
+  { id: "u8-gps", word: "GPS", type: "noun", meaningEn: "Device that gives directions using satellites", meaningAr: "جهاز تحديد المواقع", example: "Use the GPS to find the address.", image: img("photo-1548502706-f95ce0361ece"), category: "8 - Drive Slowly!" },
+  { id: "u8-headlight", word: "headlight", type: "noun", meaningEn: "Front light on a vehicle", meaningAr: "المصباح الأمامي", example: "Turn on your headlights at night.", image: img("photo-1614972973585-eb0e560b9b23"), category: "8 - Drive Slowly!" },
+  { id: "u8-highway", word: "highway", type: "noun", meaningEn: "A main public road for fast travel", meaningAr: "طريق سريع", example: "We drove fast on the highway.", image: img("photo-1477951233099-d2c5fbd878ee"), category: "8 - Drive Slowly!" },
+  { id: "u8-hood", word: "hood", type: "noun", meaningEn: "Cover over a car's engine", meaningAr: "غطاء محرك السيارة", example: "He opened the hood to check the engine.", image: img("photo-1713566844481-a7f1b60d4255"), category: "8 - Drive Slowly!" },
+  { id: "u8-ignition", word: "ignition", type: "noun", meaningEn: "Switch that starts the car engine", meaningAr: "مفتاح تشغيل السيارة", example: "Put the key in the ignition.", image: img("photo-1631565975627-1ab041c0b540"), category: "8 - Drive Slowly!" },
+  { id: "u8-interior", word: "interior", type: "noun", meaningEn: "The inside of something", meaningAr: "الجزء الداخلي", example: "The car has a leather interior.", image: img("photo-1624105310151-b84995c652cc"), category: "8 - Drive Slowly!" },
+  { id: "u8-pedestrian", word: "pedestrian", type: "noun", meaningEn: "A person walking on a street", meaningAr: "أحد المشاة", example: "Always watch for pedestrians.", image: img("photo-1726520938488-12c3f1f4a1bf"), category: "8 - Drive Slowly!" },
+  { id: "u8-rearview-mirror", word: "rearview mirror", type: "noun", meaningEn: "Mirror used to see behind the car", meaningAr: "مرآة الرؤية الخلفية", example: "Check the rearview mirror before turning.", image: img("photo-1605550974143-181e7edc7d86"), category: "8 - Drive Slowly!" },
+  { id: "u8-road-sign", word: "road sign", type: "noun", meaningEn: "A sign that gives information to drivers", meaningAr: "إشارة طريق", example: "Obey every road sign.", image: img("photo-1583125320604-8245f1e50c1e"), category: "8 - Drive Slowly!" },
+  { id: "u8-seat-belt", word: "seat belt", type: "noun", meaningEn: "A safety strap worn in vehicles", meaningAr: "حزام الأمان", example: "Always wear your seat belt.", image: img("photo-1706288457096-2e9b24eb2823"), category: "8 - Drive Slowly!" },
+  { id: "u8-signal-light", word: "signal light", type: "noun", meaningEn: "Light used to show direction of turn", meaningAr: "إشارة الانعطاف", example: "Use the signal light before turning.", image: img("photo-1694787716523-c502712de60c"), category: "8 - Drive Slowly!" },
+  { id: "u8-speed-limit", word: "speed limit", type: "noun", meaningEn: "Maximum legal driving speed", meaningAr: "السرعة القصوى المسموحة", example: "The speed limit here is 60.", image: img("photo-1637417494940-1ea47a8a4874"), category: "8 - Drive Slowly!" },
+  { id: "u8-steering-wheel", word: "steering wheel", type: "noun", meaningEn: "Wheel used to steer a vehicle", meaningAr: "عجلة القيادة", example: "Keep both hands on the steering wheel.", image: img("photo-1612805144400-88c7821bf36f"), category: "8 - Drive Slowly!" },
+  { id: "u8-ticket", word: "ticket", type: "noun", meaningEn: "Official notice of a traffic offense", meaningAr: "مخالفة مرورية", example: "He got a ticket for speeding.", image: img("photo-1684487788413-6565d1ecd892"), category: "8 - Drive Slowly!" },
+  { id: "u8-trunk", word: "trunk", type: "noun", meaningEn: "Storage space at the back of a car", meaningAr: "صندوق السيارة الخلفي", example: "Put the bags in the trunk.", image: img("photo-1688054004445-7c9108eb4005"), category: "8 - Drive Slowly!" },
+  { id: "u8-windshield", word: "windshield", type: "noun", meaningEn: "Front window of a vehicle", meaningAr: "الزجاج الأمامي للسيارة", example: "A rock cracked the windshield.", image: img("photo-1618934116136-16d28f184b10"), category: "8 - Drive Slowly!" },
+  { id: "u8-windshield-wipers", word: "windshield wipers", type: "noun", meaningEn: "Blades that clean the windshield", meaningAr: "ماسحات الزجاج", example: "Turn on the windshield wipers in the rain.", image: img("photo-1663041538617-a691d57bf5e4"), category: "8 - Drive Slowly!" },
+  { id: "u8-obey", word: "obey", type: "verb", meaningEn: "To follow rules or commands", meaningAr: "يُطيع", example: "Obey the traffic laws.", image: img("photo-1572289233776-f408eeea86f5"), category: "8 - Drive Slowly!" },
+  { id: "u8-pass", word: "pass", type: "verb", meaningEn: "To move past something", meaningAr: "يتجاوز", example: "Don't pass the car on this road.", image: img("photo-1671068708337-9d0c67cd1b3c"), category: "8 - Drive Slowly!" },
+  { id: "u8-speed", word: "speed", type: "verb", meaningEn: "To drive faster than the legal limit", meaningAr: "يُسرع", example: "Don't speed in the city.", image: img("photo-1567333188258-99e13c119241"), category: "8 - Drive Slowly!" },
+  { id: "u8-watch-out", word: "watch out", type: "verb", meaningEn: "Be careful; pay attention", meaningAr: "انتبه / احذر", example: "Watch out for that car!", image: vec("1738926671790-51ac3dac60a0"), category: "8 - Drive Slowly!" },
+  { id: "u8-carefully", word: "carefully", type: "adverb", meaningEn: "In a cautious way", meaningAr: "بحذر", example: "Drive carefully in the rain.", image: img("photo-1489850846882-35ef10a4b480"), category: "8 - Drive Slowly!" },
+  { id: "u8-slowly", word: "slowly", type: "adverb", meaningEn: "At a low speed", meaningAr: "ببطء", example: "Walk slowly across the street.", image: img("photo-1597776941486-054bf5529210"), category: "8 - Drive Slowly!" },
+  { id: "u8-well", word: "well", type: "adverb", meaningEn: "In a good or skilled way", meaningAr: "بشكل جيد", example: "She drives very well.", image: wellExamImg, category: "8 - Drive Slowly!" },
+  { id: "u8-in-a-hurry", word: "in a hurry", type: "expression", meaningEn: "Doing something quickly because there's little time", meaningAr: "في عجلة من أمره", example: "Sorry, I'm in a hurry.", image: vec("1774859372787-8bb5ff415c70"), category: "8 - Drive Slowly!" },
+  { id: "u8-run-into-traffic", word: "run into traffic", type: "expression", meaningEn: "To suddenly get stuck in traffic", meaningAr: "يقع في زحام مروري", example: "We ran into traffic on the way home.", image: img("photo-1665285977193-f2fa8a0b4ffa"), category: "8 - Drive Slowly!" },
+  { id: "u8-hey", word: "Hey!", type: "expression", meaningEn: "Used to get someone's attention", meaningAr: "مهلاً! / يا!", example: "Hey! Watch where you're going.", image: vec("1760361691563-278b9e38a193"), category: "8 - Drive Slowly!" },
+  { id: "u8-im-doing-60", word: "I'm doing 60.", type: "expression", meaningEn: "I'm driving at 60 mph/kph", meaningAr: "أنا أسير بسرعة 60", example: "Don't worry, I'm doing 60.", image: img("photo-1604973390741-b26cc8ce7dea"), category: "8 - Drive Slowly!" },
+  { id: "u8-cant-be-serious", word: "You can't be serious!", type: "expression", meaningEn: "You must be joking", meaningAr: "لا يمكن أن تكون جاداً!", example: "Pay $500? You can't be serious!", image: img("photo-1605814573621-0513c34a0d58"), category: "8 - Drive Slowly!" },
 
   // ============================================================
   // UNIT 9 — All Kinds of People
@@ -316,11 +321,14 @@ function stopAll(): void {
   }
 }
 
-async function fetchDictionaryAudio(word: string): Promise<string | null> {
+async function fetchDictionaryAudio(word: string, timeoutMs = 1200): Promise<string | null> {
   const key = word.toLowerCase();
   if (audioCache.has(key)) return audioCache.get(key)!;
   try {
-    const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(key)}`);
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+    const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(key)}`, { signal: ctrl.signal });
+    clearTimeout(timer);
     if (!res.ok) {
       audioCache.set(key, null);
       return null;
@@ -344,12 +352,19 @@ async function fetchDictionaryAudio(word: string): Promise<string | null> {
   }
 }
 
+// Prefetch audio in the background so it's cached for instant playback later
+export function prefetchAudio(text: string): void {
+  const trimmed = text.trim();
+  if (/^[a-zA-Z][a-zA-Z'-]*$/.test(trimmed)) {
+    fetchDictionaryAudio(trimmed, 5000).catch(() => {});
+  }
+}
+
 export function speakWord(text: string, lang: string = "en-US"): void {
   if (typeof window === "undefined") return;
   stopAll();
 
   const trimmed = text.trim();
-  // Only try dictionary for single English words (letters/hyphen only)
   const isSingleEnglishWord = /^[a-zA-Z][a-zA-Z'-]*$/.test(trimmed) && lang.startsWith("en");
 
   if (!isSingleEnglishWord) {
@@ -357,7 +372,10 @@ export function speakWord(text: string, lang: string = "en-US"): void {
     return;
   }
 
-  fetchDictionaryAudio(trimmed).then((url) => {
+  const key = trimmed.toLowerCase();
+  // If cached, play instantly
+  if (audioCache.has(key)) {
+    const url = audioCache.get(key)!;
     if (url) {
       const audio = new Audio(url);
       currentAudio = audio;
@@ -365,5 +383,11 @@ export function speakWord(text: string, lang: string = "en-US"): void {
     } else {
       fallbackSpeak(text, lang);
     }
-  });
+    return;
+  }
+
+  // Not cached: speak via Web Speech immediately so user hears something now,
+  // and prefetch dictionary audio for next time.
+  fallbackSpeak(text, lang);
+  fetchDictionaryAudio(trimmed, 5000).catch(() => {});
 }
