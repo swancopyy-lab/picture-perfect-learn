@@ -15,6 +15,8 @@ export interface VocabWord {
 
 const img = (id: string) => `https://images.unsplash.com/${id}?w=600&q=80&auto=format`;
 const vec = (id: string) => `https://images.unsplash.com/vector-${id}?w=600&q=80&auto=format`;
+// Unsplash short-id (from photo page URL) — uses source.unsplash redirect
+const us = (shortId: string) => `https://source.unsplash.com/${shortId}/600x450`;
 
 export const vocabulary: VocabWord[] = [
   // ============================================================
