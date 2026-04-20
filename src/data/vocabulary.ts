@@ -302,11 +302,62 @@ export function getWordsByCategory(category: string): VocabWord[] {
 const audioCache = new Map<string, string | null>();
 let currentAudio: HTMLAudioElement | null = null;
 
+// Cache the best English voice once chosen
+let bestEnglishVoice: SpeechSynthesisVoice | null = null;
+
+function pickBestEnglishVoice(): SpeechSynthesisVoice | null {
+  if (typeof window === "undefined" || !("speechSynthesis" in window)) return null;
+  if (bestEnglishVoice) return bestEnglishVoice;
+  const voices = window.speechSynthesis.getVoices();
+  if (!voices.length) return null;
+
+  const englishVoices = voices.filter(v => v.lang && v.lang.toLowerCase().startsWith("en"));
+  if (!englishVoices.length) return null;
+
+  // Preference order: high-quality named voices > en-US > en-GB > any English
+  const preferredNames = [
+    "Google US English", "Google UK English Female", "Google UK English Male",
+    "Microsoft Aria", "Microsoft Jenny", "Microsoft Guy", "Microsoft Zira", "Microsoft David",
+    "Samantha", "Karen", "Daniel", "Alex", "Moira", "Tessa",
+  ];
+  for (const name of preferredNames) {
+    const v = englishVoices.find(x => x.name.includes(name));
+    if (v) { bestEnglishVoice = v; return v; }
+  }
+  // Prefer non-default local en-US, then en-GB, then any
+  bestEnglishVoice =
+    englishVoices.find(v => v.lang.toLowerCase() === "en-us" && v.localService) ||
+    englishVoices.find(v => v.lang.toLowerCase() === "en-us") ||
+    englishVoices.find(v => v.lang.toLowerCase() === "en-gb") ||
+    englishVoices[0];
+  return bestEnglishVoice;
+}
+
+// Trigger voice list load (some browsers load asynchronously)
+if (typeof window !== "undefined" && "speechSynthesis" in window) {
+  window.speechSynthesis.getVoices();
+  window.speechSynthesis.onvoiceschanged = () => {
+    bestEnglishVoice = null;
+    pickBestEnglishVoice();
+  };
+}
+
 function fallbackSpeak(text: string, lang: string): void {
   if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
   window.speechSynthesis.cancel();
   const utter = new SpeechSynthesisUtterance(text);
-  utter.lang = lang;
+  // Force English voice — never let the browser pick Arabic for English text
+  if (lang.startsWith("en")) {
+    const voice = pickBestEnglishVoice();
+    if (voice) {
+      utter.voice = voice;
+      utter.lang = voice.lang;
+    } else {
+      utter.lang = "en-US";
+    }
+  } else {
+    utter.lang = lang;
+  }
   utter.rate = 0.9;
   window.speechSynthesis.speak(utter);
 }
