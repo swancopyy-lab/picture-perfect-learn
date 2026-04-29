@@ -40,6 +40,8 @@ import blowUpImg from "@/assets/unit10/blow-up.png";
 import cleanUpImg from "@/assets/unit10/clean-up.jpg";
 import giveBackImg from "@/assets/unit10/give-back.png";
 import giveUpImg from "@/assets/unit10/give-up.jpg";
+import takeOverImg from "@/assets/unit10/take-over.jpg";
+import turnDownImg from "@/assets/unit10/turn-down.jpg";
 import messUpImg from "@/assets/unit10/mess-up.jpg";
 import putAwayImg from "@/assets/unit10/put-away.png";
 import putBackImg from "@/assets/unit10/put-back.png";
@@ -219,8 +221,8 @@ export const vocabulary: VocabWord[] = [
   { id: "u10-mess-up", word: "mess up", type: "verb", meaningEn: "To make a mistake or cause disorder", meaningAr: "يُفسد / يُخطئ", example: "I messed up the recipe.", image: messUpImg, category: "10 - Who Used My Toothpaste?" },
   { id: "u10-put-away", word: "put away", type: "verb", meaningEn: "To store in the proper place", meaningAr: "يضع في مكانه", example: "Put away your toys.", image: putAwayImg, category: "10 - Who Used My Toothpaste?" },
   { id: "u10-put-back", word: "put back", type: "verb", meaningEn: "To return to original position", meaningAr: "يُرجع إلى مكانه", example: "Put the book back on the shelf.", image: putBackImg, category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-take-over", word: "take over", type: "verb", meaningEn: "To take control of something", meaningAr: "يتولّى المسؤولية", example: "She'll take over the project next week.", image: img("photo-1454165804606-c3d57bc86b40"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-turn-down", word: "turn down", type: "verb", meaningEn: "To lower the volume / refuse", meaningAr: "يخفض الصوت / يرفض", example: "Turn down the music, please.", image: img("photo-1511671782779-c97d3d27a1d4"), category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-take-over", word: "take over", type: "verb", meaningEn: "To take control of something", meaningAr: "يتولّى المسؤولية", example: "She'll take over the project next week.", image: takeOverImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-turn-down", word: "turn down", type: "verb", meaningEn: "To lower the volume / refuse", meaningAr: "يخفض الصوت / يرفض", example: "Turn down the music, please.", image: turnDownImg, category: "10 - Who Used My Toothpaste?" },
   { id: "u10-turn-off", word: "turn off", type: "verb", meaningEn: "To stop a device from working", meaningAr: "يطفئ", example: "Turn off the lights when you leave.", image: img("photo-1507473885765-e6ed057ab6fe"), category: "10 - Who Used My Toothpaste?" },
   { id: "u10-dirty", word: "dirty", type: "adjective", meaningEn: "Not clean", meaningAr: "متّسخ", example: "Your shoes are dirty.", image: img("photo-1581578731548-c64695cc6952"), category: "10 - Who Used My Toothpaste?" },
   { id: "u10-already", word: "already", type: "adverb", meaningEn: "Before now or before a certain time", meaningAr: "بالفعل / مسبقاً", example: "I've already finished my homework.", image: img("photo-1434030216411-0b793f4b4173"), category: "10 - Who Used My Toothpaste?" },
