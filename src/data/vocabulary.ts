@@ -1,6 +1,48 @@
 import gloveCompartmentImg from "@/assets/glove-compartment.jpg";
 import gasTankImg from "@/assets/gas-tank.jpg";
 import wellExamImg from "@/assets/well-exam.jpg";
+import selfishImg from "@/assets/unit9/selfish.png";
+import seriousImg from "@/assets/unit9/serious.jpg";
+import sillyImg from "@/assets/unit9/silly.jpg";
+import talkativeImg from "@/assets/unit9/talkative.jpg";
+import typicalImg from "@/assets/unit9/typical.jpg";
+import unreliableImg from "@/assets/unit9/unreliable.jpg";
+import giveDirectionsImg from "@/assets/unit9/give-directions.jpg";
+import hailTaxiImg from "@/assets/unit9/hail-taxi.jpg";
+import handOutImg from "@/assets/unit9/hand-out.jpg";
+import onDutyImg from "@/assets/unit9/on-duty.jpg";
+import realTreatImg from "@/assets/unit9/real-treat.jpg";
+import iMeanImg from "@/assets/unit9/i-mean.jpg";
+import ofCourseImg from "@/assets/unit9/of-course.jpg";
+import complaintImg from "@/assets/unit10/complaint.jpg";
+import dishwashingImg from "@/assets/unit10/dishwashing.jpg";
+import hairbrushImg from "@/assets/unit10/hairbrush.jpg";
+import hairDryerImg from "@/assets/unit10/hair-dryer.jpg";
+import messImg from "@/assets/unit10/mess.jpg";
+import mirrorImg from "@/assets/unit10/mirror.jpg";
+import nailPolishImg from "@/assets/unit10/nail-polish.jpg";
+import nephewImg from "@/assets/unit10/nephew.jpg";
+import scissorsImg from "@/assets/unit10/scissors.jpg";
+import shampooImg from "@/assets/unit10/shampoo.jpg";
+import toothpasteImg from "@/assets/unit10/toothpaste.jpg";
+import annoyImg from "@/assets/unit10/annoy.jpg";
+import avoidImg from "@/assets/unit10/avoid.jpg";
+import borrowImg from "@/assets/unit10/borrow.jpg";
+import feedImg from "@/assets/unit10/feed.jpg";
+import finishImg from "@/assets/unit10/finish.jpg";
+import imagineImg from "@/assets/unit10/imagine.jpg";
+import irritateImg from "@/assets/unit10/irritate.jpg";
+import mindImg from "@/assets/unit10/mind.jpg";
+import splashImg from "@/assets/unit10/splash.jpg";
+import standImg from "@/assets/unit10/stand.jpg";
+import suggestImg from "@/assets/unit10/suggest.jpg";
+import blowUpImg from "@/assets/unit10/blow-up.png";
+import cleanUpImg from "@/assets/unit10/clean-up.jpg";
+import giveBackImg from "@/assets/unit10/give-back.png";
+import giveUpImg from "@/assets/unit10/give-up.jpg";
+import messUpImg from "@/assets/unit10/mess-up.jpg";
+import putAwayImg from "@/assets/unit10/put-away.png";
+import putBackImg from "@/assets/unit10/put-back.png";
 
 export interface VocabWord {
   id: string;
@@ -131,52 +173,52 @@ export const vocabulary: VocabWord[] = [
   { id: "u9-quiet", word: "quiet", type: "adjective", meaningEn: "Not making much noise", meaningAr: "هادئ", example: "Please be quiet in the library.", image: vec("1776244476849-4f672bc9a13c"), category: "9 - All Kinds of People" },
   { id: "u9-reliable", word: "reliable", type: "adjective", meaningEn: "Can be trusted; dependable", meaningAr: "موثوق", example: "He's a reliable friend.", image: vec("1761076906837-2f13922739bc"), category: "9 - All Kinds of People" },
   { id: "u9-rude", word: "rude", type: "adjective", meaningEn: "Showing bad manners", meaningAr: "وقح / فظ", example: "It's rude to interrupt people.", image: img("photo-1529323871863-75303b5737ec"), category: "9 - All Kinds of People" },
-  { id: "u9-selfish", word: "selfish", type: "adjective", meaningEn: "Caring only about yourself", meaningAr: "أناني", example: "Don't be selfish; share with your sister.", image: img("photo-1504439468489-c8920d796a29"), category: "9 - All Kinds of People" },
-  { id: "u9-serious", word: "serious", type: "adjective", meaningEn: "Not joking; thoughtful", meaningAr: "جاد", example: "He gave me a serious look.", image: img("photo-1507003211169-0a1dd7228f2d"), category: "9 - All Kinds of People" },
-  { id: "u9-silly", word: "silly", type: "adjective", meaningEn: "Foolish or playful", meaningAr: "سخيف / مرح", example: "Stop being silly!", image: img("photo-1504439468489-c8920d796a29"), category: "9 - All Kinds of People" },
-  { id: "u9-talkative", word: "talkative", type: "adjective", meaningEn: "Liking to talk a lot", meaningAr: "كثير الكلام / ثرثار", example: "My sister is very talkative.", image: img("photo-1573497019940-1c28c88b4f3e"), category: "9 - All Kinds of People" },
-  { id: "u9-typical", word: "typical", type: "adjective", meaningEn: "Showing the usual qualities", meaningAr: "نموذجي / معتاد", example: "It's a typical sunny day in summer.", image: img("photo-1469474968028-56623f02e42e"), category: "9 - All Kinds of People" },
-  { id: "u9-unreliable", word: "unreliable", type: "adjective", meaningEn: "Cannot be trusted", meaningAr: "غير موثوق", example: "He's unreliable; he's always late.", image: img("photo-1495020689067-958852a7765e"), category: "9 - All Kinds of People" },
-  { id: "u9-give-directions", word: "give directions", type: "expression", meaningEn: "To tell someone how to get somewhere", meaningAr: "يُعطي إرشادات / اتجاهات", example: "Can you give me directions to the hotel?", image: img("photo-1524661135-423995f22d0b"), category: "9 - All Kinds of People" },
-  { id: "u9-hail-taxi", word: "hail a taxi", type: "expression", meaningEn: "To signal a taxi to stop", meaningAr: "يستوقف سيارة أجرة", example: "Let's hail a taxi to the airport.", image: img("photo-1519501025264-65ba15a82390"), category: "9 - All Kinds of People" },
-  { id: "u9-hand-out", word: "hand out", type: "expression", meaningEn: "To give to many people", meaningAr: "يوزّع", example: "He handed out flyers downtown.", image: img("photo-1695634621375-0b66a9d5d1bc"), category: "9 - All Kinds of People" },
-  { id: "u9-on-duty", word: "on duty", type: "expression", meaningEn: "Working at one's job", meaningAr: "في العمل / على رأس العمل", example: "The doctor is on duty tonight.", image: img("photo-1612531386530-97286d97c2d2"), category: "9 - All Kinds of People" },
-  { id: "u9-real-treat", word: "a real treat", type: "expression", meaningEn: "Something especially enjoyable", meaningAr: "شيء ممتع حقاً", example: "Going to the concert was a real treat.", image: img("photo-1492684223066-81342ee5ff30"), category: "9 - All Kinds of People" },
-  { id: "u9-i-mean", word: "I mean", type: "expression", meaningEn: "Used to clarify what was just said", meaningAr: "أقصد / يعني", example: "I mean, it's not that bad.", image: img("photo-1573497019940-1c28c88b4f3e"), category: "9 - All Kinds of People" },
-  { id: "u9-of-course", word: "Of course", type: "expression", meaningEn: "Certainly; naturally", meaningAr: "بالطبع", example: "Of course I'll help you.", image: img("photo-1531746020798-e6953c6e8e04"), category: "9 - All Kinds of People" },
+  { id: "u9-selfish", word: "selfish", type: "adjective", meaningEn: "Caring only about yourself", meaningAr: "أناني", example: "Don't be selfish; share with your sister.", image: selfishImg, category: "9 - All Kinds of People" },
+  { id: "u9-serious", word: "serious", type: "adjective", meaningEn: "Not joking; thoughtful", meaningAr: "جاد", example: "He gave me a serious look.", image: seriousImg, category: "9 - All Kinds of People" },
+  { id: "u9-silly", word: "silly", type: "adjective", meaningEn: "Foolish or playful", meaningAr: "سخيف / مرح", example: "Stop being silly!", image: sillyImg, category: "9 - All Kinds of People" },
+  { id: "u9-talkative", word: "talkative", type: "adjective", meaningEn: "Liking to talk a lot", meaningAr: "كثير الكلام / ثرثار", example: "My sister is very talkative.", image: talkativeImg, category: "9 - All Kinds of People" },
+  { id: "u9-typical", word: "typical", type: "adjective", meaningEn: "Showing the usual qualities", meaningAr: "نموذجي / معتاد", example: "It's a typical sunny day in summer.", image: typicalImg, category: "9 - All Kinds of People" },
+  { id: "u9-unreliable", word: "unreliable", type: "adjective", meaningEn: "Cannot be trusted", meaningAr: "غير موثوق", example: "He's unreliable; he's always late.", image: unreliableImg, category: "9 - All Kinds of People" },
+  { id: "u9-give-directions", word: "give directions", type: "expression", meaningEn: "To tell someone how to get somewhere", meaningAr: "يُعطي إرشادات / اتجاهات", example: "Can you give me directions to the hotel?", image: giveDirectionsImg, category: "9 - All Kinds of People" },
+  { id: "u9-hail-taxi", word: "hail a taxi", type: "expression", meaningEn: "To signal a taxi to stop", meaningAr: "يستوقف سيارة أجرة", example: "Let's hail a taxi to the airport.", image: hailTaxiImg, category: "9 - All Kinds of People" },
+  { id: "u9-hand-out", word: "hand out", type: "expression", meaningEn: "To give to many people", meaningAr: "يوزّع", example: "He handed out flyers downtown.", image: handOutImg, category: "9 - All Kinds of People" },
+  { id: "u9-on-duty", word: "on duty", type: "expression", meaningEn: "Working at one's job", meaningAr: "في العمل / على رأس العمل", example: "The doctor is on duty tonight.", image: onDutyImg, category: "9 - All Kinds of People" },
+  { id: "u9-real-treat", word: "a real treat", type: "expression", meaningEn: "Something especially enjoyable", meaningAr: "شيء ممتع حقاً", example: "Going to the concert was a real treat.", image: realTreatImg, category: "9 - All Kinds of People" },
+  { id: "u9-i-mean", word: "I mean", type: "expression", meaningEn: "Used to clarify what was just said", meaningAr: "أقصد / يعني", example: "I mean, it's not that bad.", image: iMeanImg, category: "9 - All Kinds of People" },
+  { id: "u9-of-course", word: "Of course", type: "expression", meaningEn: "Certainly; naturally", meaningAr: "بالطبع", example: "Of course I'll help you.", image: ofCourseImg, category: "9 - All Kinds of People" },
 
   // ============================================================
   // UNIT 10 — Who Used My Toothpaste?
   // ============================================================
-  { id: "u10-complaint", word: "complaint", type: "noun", meaningEn: "An expression of dissatisfaction", meaningAr: "شكوى", example: "She filed a complaint about the noise.", image: img("photo-1560264280-88b68371db39"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-dishwashing-liquid", word: "dishwashing liquid", type: "noun", meaningEn: "Soap for washing dishes", meaningAr: "سائل غسيل الأطباق", example: "We're out of dishwashing liquid.", image: img("photo-1585421514284-efb74c2b69ba"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-hairbrush", word: "hairbrush", type: "noun", meaningEn: "A brush for styling hair", meaningAr: "فرشاة شعر", example: "She used a hairbrush before school.", image: img("photo-1522338140-7f7fb2874bbd"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-hair-dryer", word: "hair dryer", type: "noun", meaningEn: "A device that blows hot air to dry hair", meaningAr: "مجفف شعر", example: "She dried her hair with a hair dryer.", image: img("photo-1522337360788-8b13dee7a37e"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-mess", word: "mess", type: "noun", meaningEn: "A state of disorder or untidiness", meaningAr: "فوضى", example: "Your room is such a mess!", image: img("photo-1558618666-fcd25c85f82e"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-mirror", word: "mirror", type: "noun", meaningEn: "A reflective surface", meaningAr: "مرآة", example: "She looked at herself in the mirror.", image: img("photo-1555041469-a586c61ea9bc"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-nail-polish", word: "nail polish", type: "noun", meaningEn: "Colored coating for fingernails", meaningAr: "طلاء أظافر", example: "She put on red nail polish.", image: img("photo-1604654894610-df63bc536371"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-nephew", word: "nephew", type: "noun", meaningEn: "Your brother's or sister's son", meaningAr: "ابن الأخ / ابن الأخت", example: "My nephew is five years old.", image: img("photo-1503454537195-1dcabb73ffb9"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-scissors", word: "scissors", type: "noun", meaningEn: "A cutting tool with two blades", meaningAr: "مقص", example: "Cut the paper with scissors.", image: img("photo-1585336261022-680e295ce3fe"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-shampoo", word: "shampoo", type: "noun", meaningEn: "Soap for washing hair", meaningAr: "شامبو", example: "I need to buy more shampoo.", image: img("photo-1535585209827-a15fcdbc4c2d"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-toothpaste", word: "toothpaste", type: "noun", meaningEn: "Paste used to clean teeth", meaningAr: "معجون أسنان", example: "Don't forget to use toothpaste.", image: img("photo-1559650656-5d1d361ad10e"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-annoy", word: "annoy", type: "verb", meaningEn: "To make someone slightly angry", meaningAr: "يُزعج", example: "Stop annoying your sister!", image: img("photo-1504270997636-07ddfbd48945"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-avoid", word: "avoid", type: "verb", meaningEn: "To stay away from", meaningAr: "يتجنّب", example: "Try to avoid junk food.", image: img("photo-1508780709353-3ceb24caa9f1"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-borrow", word: "borrow", type: "verb", meaningEn: "To take something temporarily", meaningAr: "يستعير", example: "Can I borrow your pen?", image: img("photo-1456513080510-7bf3a84b82f8"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-feed", word: "feed", type: "verb", meaningEn: "To give food to", meaningAr: "يُطعم", example: "Don't forget to feed the cat.", image: img("photo-1574158622682-e40e69881006"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-finish", word: "finish", type: "verb", meaningEn: "To complete something", meaningAr: "يُنهي", example: "Please finish your homework.", image: img("photo-1434030216411-0b793f4b4173"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-imagine", word: "imagine", type: "verb", meaningEn: "To form a picture in your mind", meaningAr: "يتخيّل", example: "Imagine you're on a beach.", image: img("photo-1507525428034-b723cf961d3e"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-irritate", word: "irritate", type: "verb", meaningEn: "To annoy or make uncomfortable", meaningAr: "يُهيّج / يُزعج", example: "Loud music irritates me.", image: img("photo-1504270997636-07ddfbd48945"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-mind", word: "mind", type: "verb", meaningEn: "To object or be bothered by", meaningAr: "يمانع", example: "Do you mind if I sit here?", image: img("photo-1509228627152-72ae9ae6848d"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-splash", word: "splash", type: "verb", meaningEn: "To scatter liquid", meaningAr: "يرشّ / يبلّل", example: "The kids splash water in the pool.", image: img("photo-1530053969600-caed2596d242"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-stand", word: "stand", type: "verb", meaningEn: "To tolerate something", meaningAr: "يتحمّل", example: "I can't stand the noise.", image: img("photo-1470071459604-3b5ec3a7fe05"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-suggest", word: "suggest", type: "verb", meaningEn: "To propose an idea", meaningAr: "يقترح", example: "I suggest we leave early.", image: img("photo-1517245386807-bb43f82c33c4"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-blow-up", word: "blow up", type: "verb", meaningEn: "To explode or inflate", meaningAr: "ينفجر / ينفخ", example: "Let's blow up the balloons.", image: img("photo-1530103862676-de8c9debad1d"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-clean-up", word: "clean up", type: "verb", meaningEn: "To make tidy and clean", meaningAr: "ينظّف", example: "Please clean up your room.", image: img("photo-1581578731548-c64695cc6952"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-give-back", word: "give back", type: "verb", meaningEn: "To return something", meaningAr: "يُعيد", example: "Give back my book, please.", image: img("photo-1456513080510-7bf3a84b82f8"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-give-up", word: "give up", type: "verb", meaningEn: "To stop trying", meaningAr: "يستسلم", example: "Don't give up! Keep trying.", image: img("photo-1552508744-1696d4464960"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-mess-up", word: "mess up", type: "verb", meaningEn: "To make a mistake or cause disorder", meaningAr: "يُفسد / يُخطئ", example: "I messed up the recipe.", image: img("photo-1558618666-fcd25c85f82e"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-put-away", word: "put away", type: "verb", meaningEn: "To store in the proper place", meaningAr: "يضع في مكانه", example: "Put away your toys.", image: img("photo-1558618666-fcd25c85f82e"), category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-put-back", word: "put back", type: "verb", meaningEn: "To return to original position", meaningAr: "يُرجع إلى مكانه", example: "Put the book back on the shelf.", image: img("photo-1507842217343-583bb7270b66"), category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-complaint", word: "complaint", type: "noun", meaningEn: "An expression of dissatisfaction", meaningAr: "شكوى", example: "She filed a complaint about the noise.", image: complaintImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-dishwashing-liquid", word: "dishwashing liquid", type: "noun", meaningEn: "Soap for washing dishes", meaningAr: "سائل غسيل الأطباق", example: "We're out of dishwashing liquid.", image: dishwashingImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-hairbrush", word: "hairbrush", type: "noun", meaningEn: "A brush for styling hair", meaningAr: "فرشاة شعر", example: "She used a hairbrush before school.", image: hairbrushImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-hair-dryer", word: "hair dryer", type: "noun", meaningEn: "A device that blows hot air to dry hair", meaningAr: "مجفف شعر", example: "She dried her hair with a hair dryer.", image: hairDryerImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-mess", word: "mess", type: "noun", meaningEn: "A state of disorder or untidiness", meaningAr: "فوضى", example: "Your room is such a mess!", image: messImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-mirror", word: "mirror", type: "noun", meaningEn: "A reflective surface", meaningAr: "مرآة", example: "She looked at herself in the mirror.", image: mirrorImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-nail-polish", word: "nail polish", type: "noun", meaningEn: "Colored coating for fingernails", meaningAr: "طلاء أظافر", example: "She put on red nail polish.", image: nailPolishImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-nephew", word: "nephew", type: "noun", meaningEn: "Your brother's or sister's son", meaningAr: "ابن الأخ / ابن الأخت", example: "My nephew is five years old.", image: nephewImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-scissors", word: "scissors", type: "noun", meaningEn: "A cutting tool with two blades", meaningAr: "مقص", example: "Cut the paper with scissors.", image: scissorsImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-shampoo", word: "shampoo", type: "noun", meaningEn: "Soap for washing hair", meaningAr: "شامبو", example: "I need to buy more shampoo.", image: shampooImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-toothpaste", word: "toothpaste", type: "noun", meaningEn: "Paste used to clean teeth", meaningAr: "معجون أسنان", example: "Don't forget to use toothpaste.", image: toothpasteImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-annoy", word: "annoy", type: "verb", meaningEn: "To make someone slightly angry", meaningAr: "يُزعج", example: "Stop annoying your sister!", image: annoyImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-avoid", word: "avoid", type: "verb", meaningEn: "To stay away from", meaningAr: "يتجنّب", example: "Try to avoid junk food.", image: avoidImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-borrow", word: "borrow", type: "verb", meaningEn: "To take something temporarily", meaningAr: "يستعير", example: "Can I borrow your pen?", image: borrowImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-feed", word: "feed", type: "verb", meaningEn: "To give food to", meaningAr: "يُطعم", example: "Don't forget to feed the cat.", image: feedImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-finish", word: "finish", type: "verb", meaningEn: "To complete something", meaningAr: "يُنهي", example: "Please finish your homework.", image: finishImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-imagine", word: "imagine", type: "verb", meaningEn: "To form a picture in your mind", meaningAr: "يتخيّل", example: "Imagine you're on a beach.", image: imagineImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-irritate", word: "irritate", type: "verb", meaningEn: "To annoy or make uncomfortable", meaningAr: "يُهيّج / يُزعج", example: "Loud music irritates me.", image: irritateImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-mind", word: "mind", type: "verb", meaningEn: "To object or be bothered by", meaningAr: "يمانع", example: "Do you mind if I sit here?", image: mindImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-splash", word: "splash", type: "verb", meaningEn: "To scatter liquid", meaningAr: "يرشّ / يبلّل", example: "The kids splash water in the pool.", image: splashImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-stand", word: "stand", type: "verb", meaningEn: "To tolerate something", meaningAr: "يتحمّل", example: "I can't stand the noise.", image: standImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-suggest", word: "suggest", type: "verb", meaningEn: "To propose an idea", meaningAr: "يقترح", example: "I suggest we leave early.", image: suggestImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-blow-up", word: "blow up", type: "verb", meaningEn: "To explode or inflate", meaningAr: "ينفجر / ينفخ", example: "Let's blow up the balloons.", image: blowUpImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-clean-up", word: "clean up", type: "verb", meaningEn: "To make tidy and clean", meaningAr: "ينظّف", example: "Please clean up your room.", image: cleanUpImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-give-back", word: "give back", type: "verb", meaningEn: "To return something", meaningAr: "يُعيد", example: "Give back my book, please.", image: giveBackImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-give-up", word: "give up", type: "verb", meaningEn: "To stop trying", meaningAr: "يستسلم", example: "Don't give up! Keep trying.", image: giveUpImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-mess-up", word: "mess up", type: "verb", meaningEn: "To make a mistake or cause disorder", meaningAr: "يُفسد / يُخطئ", example: "I messed up the recipe.", image: messUpImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-put-away", word: "put away", type: "verb", meaningEn: "To store in the proper place", meaningAr: "يضع في مكانه", example: "Put away your toys.", image: putAwayImg, category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-put-back", word: "put back", type: "verb", meaningEn: "To return to original position", meaningAr: "يُرجع إلى مكانه", example: "Put the book back on the shelf.", image: putBackImg, category: "10 - Who Used My Toothpaste?" },
   { id: "u10-take-over", word: "take over", type: "verb", meaningEn: "To take control of something", meaningAr: "يتولّى المسؤولية", example: "She'll take over the project next week.", image: img("photo-1454165804606-c3d57bc86b40"), category: "10 - Who Used My Toothpaste?" },
   { id: "u10-turn-down", word: "turn down", type: "verb", meaningEn: "To lower the volume / refuse", meaningAr: "يخفض الصوت / يرفض", example: "Turn down the music, please.", image: img("photo-1511671782779-c97d3d27a1d4"), category: "10 - Who Used My Toothpaste?" },
   { id: "u10-turn-off", word: "turn off", type: "verb", meaningEn: "To stop a device from working", meaningAr: "يطفئ", example: "Turn off the lights when you leave.", image: img("photo-1507473885765-e6ed057ab6fe"), category: "10 - Who Used My Toothpaste?" },
