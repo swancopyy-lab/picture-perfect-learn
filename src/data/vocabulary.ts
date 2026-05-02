@@ -45,6 +45,21 @@ import turnDownImg from "@/assets/unit10/turn-down.jpg";
 import messUpImg from "@/assets/unit10/mess-up.jpg";
 import putAwayImg from "@/assets/unit10/put-away.png";
 import putBackImg from "@/assets/unit10/put-back.png";
+import dirtyImg from "@/assets/unit10/dirty.jpg";
+import airshowImg from "@/assets/unit11/airshow.jpg";
+import conservationistImg from "@/assets/unit11/conservationist.jpg";
+import farmerImg from "@/assets/unit11/farmer.jpg";
+import graduationImg from "@/assets/unit11/graduation.jpg";
+import pollutionImg from "@/assets/unit11/pollution.jpg";
+import resortImg from "@/assets/unit11/resort.jpg";
+import routeImg from "@/assets/unit11/route.jpg";
+import subjectImg from "@/assets/unit11/subject.jpg";
+import careImg from "@/assets/unit11/care.jpg";
+import fitInImg from "@/assets/unit11/fit-in.jpg";
+import graduateImg from "@/assets/unit11/graduate.jpg";
+import speedImg from "@/assets/unit11/speed.jpg";
+import studyImg from "@/assets/unit11/study.jpg";
+import scenicImg from "@/assets/unit11/scenic.jpg";
 
 export interface VocabWord {
   id: string;
