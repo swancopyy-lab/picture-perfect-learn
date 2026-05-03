@@ -112,6 +112,11 @@ import u12SpreadImg from "@/assets/unit12/spread.png";
 import u12SurnameImg from "@/assets/unit12/surname.png";
 import u12TipNounImg from "@/assets/unit12/tip-noun.png";
 import u12TopicImg from "@/assets/unit12/topic.png";
+import u12HostImg from "@/assets/unit12/host.png";
+import benefitImg from "@/assets/unit11/benefit.png";
+import preferenceImg from "@/assets/unit11/preference.png";
+import getChanceImg from "@/assets/unit11/get-chance.png";
+import getCaughtImg from "@/assets/unit11/get-caught.png";
 
 export interface VocabWord {
   id: string;
@@ -255,6 +260,7 @@ export const vocabulary: VocabWord[] = [
   { id: "u9-real-treat", word: "a real treat", type: "expression", meaningEn: "Something especially enjoyable", meaningAr: "شيء ممتع حقاً", example: "Going to the concert was a real treat.", image: realTreatImg, category: "9 - All Kinds of People" },
   { id: "u9-i-mean", word: "I mean", type: "expression", meaningEn: "Used to clarify what was just said", meaningAr: "أقصد / يعني", example: "I mean, it's not that bad.", image: iMeanImg, category: "9 - All Kinds of People" },
   { id: "u9-of-course", word: "Of course", type: "expression", meaningEn: "Certainly; naturally", meaningAr: "بالطبع", example: "Of course I'll help you.", image: ofCourseImg, category: "9 - All Kinds of People" },
+  { id: "u9-in-a-hurry", word: "in a hurry", type: "expression", meaningEn: "Doing something quickly because there's little time", meaningAr: "في عجلة من أمره", example: "Sorry, I'm in a hurry.", image: vec("1774859372787-8bb5ff415c70"), category: "9 - All Kinds of People" },
 
   // ============================================================
   // UNIT 10 — Who Used My Toothpaste?
@@ -304,14 +310,14 @@ export const vocabulary: VocabWord[] = [
   // UNIT 11 — Making Choices
   // ============================================================
   { id: "u11-airshow", word: "airshow", type: "noun", meaningEn: "A public display of flying aircraft", meaningAr: "عرض طيران", example: "The airshow was amazing to watch.", image: airshowImg, category: "11 - Making Choices" },
-  { id: "u11-benefit", word: "benefit", type: "noun", meaningEn: "An advantage or good result", meaningAr: "فائدة", example: "Exercise has many health benefits.", image: img("photo-1517836357463-d25dfeac3438"), category: "11 - Making Choices" },
+  { id: "u11-benefit", word: "benefit", type: "noun", meaningEn: "An advantage or good result", meaningAr: "فائدة", example: "Exercise has many health benefits.", image: benefitImg, category: "11 - Making Choices" },
   { id: "u11-choice", word: "choice", type: "noun", meaningEn: "A decision between options", meaningAr: "اختيار", example: "You have to make a choice.", image: choiceImg, category: "11 - Making Choices" },
   { id: "u11-conservationist", word: "conservationist", type: "noun", meaningEn: "Someone who protects nature", meaningAr: "مدافع عن البيئة", example: "She's a famous conservationist.", image: conservationistImg, category: "11 - Making Choices" },
   { id: "u11-environment", word: "environment", type: "noun", meaningEn: "The natural world around us", meaningAr: "البيئة", example: "We must protect the environment.", image: img("photo-1441974231531-c6227db76b6e"), category: "11 - Making Choices" },
   { id: "u11-farmer", word: "farmer", type: "noun", meaningEn: "Someone who works on a farm", meaningAr: "مزارع", example: "The farmer grows vegetables.", image: farmerImg, category: "11 - Making Choices" },
   { id: "u11-graduation", word: "graduation", type: "noun", meaningEn: "Ceremony of completing studies", meaningAr: "حفل التخرّج", example: "Her graduation is next week.", image: graduationImg, category: "11 - Making Choices" },
   { id: "u11-pollution", word: "pollution", type: "noun", meaningEn: "Harmful substances in the environment", meaningAr: "تلوّث", example: "Air pollution is a big problem.", image: pollutionImg, category: "11 - Making Choices" },
-  { id: "u11-preference", word: "preference", type: "noun", meaningEn: "Liking one thing more than another", meaningAr: "تفضيل", example: "Do you have a preference for tea or coffee?", image: img("photo-1495474472287-4d71bcdd2085"), category: "11 - Making Choices" },
+  { id: "u11-preference", word: "preference", type: "noun", meaningEn: "Liking one thing more than another", meaningAr: "تفضيل", example: "Do you have a preference for tea or coffee?", image: preferenceImg, category: "11 - Making Choices" },
   { id: "u11-resort", word: "resort", type: "noun", meaningEn: "A place for vacations and relaxation", meaningAr: "منتجع", example: "We stayed at a beach resort.", image: resortImg, category: "11 - Making Choices" },
   { id: "u11-route", word: "route", type: "noun", meaningEn: "The way from one place to another", meaningAr: "طريق / مسار", example: "Take the shortest route home.", image: routeImg, category: "11 - Making Choices" },
   { id: "u11-scholarship", word: "scholarship", type: "noun", meaningEn: "Financial help for education", meaningAr: "منحة دراسية", example: "She got a scholarship to study abroad.", image: scholarshipImg, category: "11 - Making Choices" },
@@ -329,8 +335,8 @@ export const vocabulary: VocabWord[] = [
   { id: "u11-scenic", word: "scenic", type: "adjective", meaningEn: "Having beautiful natural views", meaningAr: "ذو مناظر خلّابة", example: "We took the scenic route home.", image: scenicImg, category: "11 - Making Choices" },
   { id: "u11-be-against", word: "be against", type: "expression", meaningEn: "To oppose something", meaningAr: "يعارض", example: "I'm against cutting down trees.", image: beAgainstImg, category: "11 - Making Choices" },
   { id: "u11-feel-like", word: "feel like (doing)", type: "expression", meaningEn: "To want to do something", meaningAr: "يرغب في فعل شيء", example: "I feel like going for a walk.", image: feelLikeImg, category: "11 - Making Choices" },
-  { id: "u11-get-chance", word: "get a chance", type: "expression", meaningEn: "To have an opportunity", meaningAr: "يحصل على فرصة", example: "I never got a chance to speak.", image: img("photo-1469474968028-56623f02e42e"), category: "11 - Making Choices" },
-  { id: "u11-get-caught", word: "get caught", type: "expression", meaningEn: "To be discovered doing something wrong", meaningAr: "يُمسك متلبساً", example: "He got caught cheating on the exam.", image: img("photo-1517242810446-cc8951b2be40"), category: "11 - Making Choices" },
+  { id: "u11-get-chance", word: "get a chance", type: "expression", meaningEn: "To have an opportunity", meaningAr: "يحصل على فرصة", example: "I never got a chance to speak.", image: getChanceImg, category: "11 - Making Choices" },
+  { id: "u11-get-caught", word: "get caught", type: "expression", meaningEn: "To be discovered doing something wrong", meaningAr: "يُمسك متلبساً", example: "He got caught cheating on the exam.", image: getCaughtImg, category: "11 - Making Choices" },
   { id: "u11-would-rather", word: "would rather", type: "expression", meaningEn: "To prefer to", meaningAr: "يُفضّل أن", example: "I would rather stay home tonight.", image: wouldRatherImg, category: "11 - Making Choices" },
   { id: "u11-seems-to-me", word: "It seems to me", type: "expression", meaningEn: "In my opinion", meaningAr: "يبدو لي", example: "It seems to me that he's right.", image: seemsToMeImg, category: "11 - Making Choices" },
   { id: "u11-make-up-mind", word: "make up your mind", type: "expression", meaningEn: "To make a final decision", meaningAr: "يحسم قراره", example: "Hurry up and make up your mind!", image: makeUpMindImg, category: "11 - Making Choices" },
@@ -345,7 +351,7 @@ export const vocabulary: VocabWord[] = [
   { id: "u12-dust", word: "dust", type: "noun", meaningEn: "Fine particles of dirt", meaningAr: "غبار", example: "The shelves are covered in dust.", image: u12DustImg, category: "12 - Culture Shock" },
   { id: "u12-graduate", word: "graduate", type: "noun", meaningEn: "Someone who completed a degree", meaningAr: "خريج", example: "She's a recent graduate of the university.", image: u12GraduateImg, category: "12 - Culture Shock" },
   { id: "u12-guest", word: "guest", type: "noun", meaningEn: "A person invited to someone's home", meaningAr: "ضيف", example: "We have guests coming for dinner.", image: u12GuestImg, category: "12 - Culture Shock" },
-  { id: "u12-host", word: "host", type: "noun", meaningEn: "A person who receives guests", meaningAr: "مُضيف", example: "She's a wonderful host.", image: img("photo-1504703395950-b89145a5425b"), category: "12 - Culture Shock" },
+  { id: "u12-host", word: "host", type: "noun", meaningEn: "A person who receives guests", meaningAr: "مُضيف", example: "She's a wonderful host.", image: u12HostImg, category: "12 - Culture Shock" },
   { id: "u12-impression", word: "impression", type: "noun", meaningEn: "An idea or feeling about someone/something", meaningAr: "انطباع", example: "First impressions are important.", image: u12ImpressionImg, category: "12 - Culture Shock" },
   { id: "u12-lawyer", word: "lawyer", type: "noun", meaningEn: "A person who practices law", meaningAr: "محامٍ", example: "She wants to be a lawyer.", image: img("photo-1589994965851-a8f479c573a9"), category: "12 - Culture Shock" },
   { id: "u12-mud", word: "mud", type: "noun", meaningEn: "Wet soft earth", meaningAr: "طين / وحل", example: "The kids played in the mud.", image: u12MudImg, category: "12 - Culture Shock" },
