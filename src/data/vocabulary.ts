@@ -296,9 +296,9 @@ export const vocabulary: VocabWord[] = [
   { id: "u10-just", word: "just", type: "adverb", meaningEn: "A very short time ago", meaningAr: "للتو / منذ قليل", example: "I just got home.", image: justImg, category: "10 - Who Used My Toothpaste?" },
   { id: "u10-yet", word: "yet", type: "adverb", meaningEn: "Up to now (in questions/negatives)", meaningAr: "حتى الآن / بعد", example: "Have you finished yet?", image: yetImg, category: "10 - Who Used My Toothpaste?" },
   { id: "u10-make-at-home", word: "make oneself at home", type: "expression", meaningEn: "To feel comfortable as if in your own home", meaningAr: "تصرّف كأنك في منزلك", example: "Please come in and make yourself at home.", image: makeAtHomeImg, category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-wait-in-line", word: "wait in line", type: "expression", meaningEn: "To stand in a line waiting your turn", meaningAr: "ينتظر في الصف", example: "We had to wait in line for an hour.", image: img("photo-1556742044-3c52d6e88c62"), category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-wait-in-line", word: "wait in line", type: "expression", meaningEn: "To stand in a line waiting your turn", meaningAr: "ينتظر في الصف", example: "We had to wait in line for an hour.", image: waitInLineImg, category: "10 - Who Used My Toothpaste?" },
   { id: "u10-at-long-last", word: "At long last!", type: "expression", meaningEn: "Finally, after a long wait", meaningAr: "أخيراً!", example: "At long last, the rain has stopped.", image: atLongLastImg, category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-bit-too-much", word: "That's a bit too much.", type: "expression", meaningEn: "That's excessive", meaningAr: "هذا أكثر من اللازم", example: "Five hours of TV? That's a bit too much.", image: img("photo-1499617471673-c4ebd6a3b62f"), category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-bit-too-much", word: "That's a bit too much.", type: "expression", meaningEn: "That's excessive", meaningAr: "هذا أكثر من اللازم", example: "Five hours of TV? That's a bit too much.", image: bitTooMuchImg, category: "10 - Who Used My Toothpaste?" },
 
   // ============================================================
   // UNIT 11 — Making Choices
