@@ -66,6 +66,10 @@ import justImg from "@/assets/unit10/just.png";
 import yetImg from "@/assets/unit10/yet.png";
 import makeAtHomeImg from "@/assets/unit10/make-at-home.png";
 import atLongLastImg from "@/assets/unit10/at-long-last.png";
+import giveUpImg from "@/assets/unit10/give-up.png";
+import turnOffImg from "@/assets/unit10/turn-off.png";
+import waitInLineImg from "@/assets/unit10/wait-in-line.png";
+import bitTooMuchImg from "@/assets/unit10/bit-too-much.png";
 // Unit 11 additions
 import choiceImg from "@/assets/unit11/choice.png";
 import failImg from "@/assets/unit11/fail.png";
@@ -280,21 +284,21 @@ export const vocabulary: VocabWord[] = [
   { id: "u10-blow-up", word: "blow up", type: "verb", meaningEn: "To explode or inflate", meaningAr: "ينفجر / ينفخ", example: "Let's blow up the balloons.", image: blowUpImg, category: "10 - Who Used My Toothpaste?" },
   { id: "u10-clean-up", word: "clean up", type: "verb", meaningEn: "To make tidy and clean", meaningAr: "ينظّف", example: "Please clean up your room.", image: cleanUpImg, category: "10 - Who Used My Toothpaste?" },
   { id: "u10-give-back", word: "give back", type: "verb", meaningEn: "To return something", meaningAr: "يُعيد", example: "Give back my book, please.", image: giveBackImg, category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-give-up", word: "give up", type: "verb", meaningEn: "To stop trying", meaningAr: "يستسلم", example: "Don't give up! Keep trying.", image: img("photo-1517245386807-bb43f82c33c4"), category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-give-up", word: "give up", type: "verb", meaningEn: "To stop trying", meaningAr: "يستسلم", example: "Don't give up! Keep trying.", image: giveUpImg, category: "10 - Who Used My Toothpaste?" },
   { id: "u10-mess-up", word: "mess up", type: "verb", meaningEn: "To make a mistake or cause disorder", meaningAr: "يُفسد / يُخطئ", example: "I messed up the recipe.", image: messUpImg, category: "10 - Who Used My Toothpaste?" },
   { id: "u10-put-away", word: "put away", type: "verb", meaningEn: "To store in the proper place", meaningAr: "يضع في مكانه", example: "Put away your toys.", image: putAwayImg, category: "10 - Who Used My Toothpaste?" },
   { id: "u10-put-back", word: "put back", type: "verb", meaningEn: "To return to original position", meaningAr: "يُرجع إلى مكانه", example: "Put the book back on the shelf.", image: putBackImg, category: "10 - Who Used My Toothpaste?" },
   { id: "u10-take-over", word: "take over", type: "verb", meaningEn: "To take control of something", meaningAr: "يتولّى المسؤولية", example: "She'll take over the project next week.", image: takeOverImg, category: "10 - Who Used My Toothpaste?" },
   { id: "u10-turn-down", word: "turn down", type: "verb", meaningEn: "To lower the volume / refuse", meaningAr: "يخفض الصوت / يرفض", example: "Turn down the music, please.", image: turnDownImg, category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-turn-off", word: "turn off", type: "verb", meaningEn: "To stop a device from working", meaningAr: "يطفئ", example: "Turn off the lights when you leave.", image: img("photo-1507473885765-e6ed057ab6fe"), category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-turn-off", word: "turn off", type: "verb", meaningEn: "To stop a device from working", meaningAr: "يطفئ", example: "Turn off the lights when you leave.", image: turnOffImg, category: "10 - Who Used My Toothpaste?" },
   { id: "u10-dirty", word: "dirty", type: "adjective", meaningEn: "Not clean", meaningAr: "متّسخ", example: "Your shoes are dirty.", image: dirtyImg, category: "10 - Who Used My Toothpaste?" },
   { id: "u10-already", word: "already", type: "adverb", meaningEn: "Before now or before a certain time", meaningAr: "بالفعل / مسبقاً", example: "I've already finished my homework.", image: alreadyImg, category: "10 - Who Used My Toothpaste?" },
   { id: "u10-just", word: "just", type: "adverb", meaningEn: "A very short time ago", meaningAr: "للتو / منذ قليل", example: "I just got home.", image: justImg, category: "10 - Who Used My Toothpaste?" },
   { id: "u10-yet", word: "yet", type: "adverb", meaningEn: "Up to now (in questions/negatives)", meaningAr: "حتى الآن / بعد", example: "Have you finished yet?", image: yetImg, category: "10 - Who Used My Toothpaste?" },
   { id: "u10-make-at-home", word: "make oneself at home", type: "expression", meaningEn: "To feel comfortable as if in your own home", meaningAr: "تصرّف كأنك في منزلك", example: "Please come in and make yourself at home.", image: makeAtHomeImg, category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-wait-in-line", word: "wait in line", type: "expression", meaningEn: "To stand in a line waiting your turn", meaningAr: "ينتظر في الصف", example: "We had to wait in line for an hour.", image: img("photo-1556742044-3c52d6e88c62"), category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-wait-in-line", word: "wait in line", type: "expression", meaningEn: "To stand in a line waiting your turn", meaningAr: "ينتظر في الصف", example: "We had to wait in line for an hour.", image: waitInLineImg, category: "10 - Who Used My Toothpaste?" },
   { id: "u10-at-long-last", word: "At long last!", type: "expression", meaningEn: "Finally, after a long wait", meaningAr: "أخيراً!", example: "At long last, the rain has stopped.", image: atLongLastImg, category: "10 - Who Used My Toothpaste?" },
-  { id: "u10-bit-too-much", word: "That's a bit too much.", type: "expression", meaningEn: "That's excessive", meaningAr: "هذا أكثر من اللازم", example: "Five hours of TV? That's a bit too much.", image: img("photo-1499617471673-c4ebd6a3b62f"), category: "10 - Who Used My Toothpaste?" },
+  { id: "u10-bit-too-much", word: "That's a bit too much.", type: "expression", meaningEn: "That's excessive", meaningAr: "هذا أكثر من اللازم", example: "Five hours of TV? That's a bit too much.", image: bitTooMuchImg, category: "10 - Who Used My Toothpaste?" },
 
   // ============================================================
   // UNIT 11 — Making Choices
