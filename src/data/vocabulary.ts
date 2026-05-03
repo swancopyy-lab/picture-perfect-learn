@@ -66,6 +66,10 @@ import justImg from "@/assets/unit10/just.png";
 import yetImg from "@/assets/unit10/yet.png";
 import makeAtHomeImg from "@/assets/unit10/make-at-home.png";
 import atLongLastImg from "@/assets/unit10/at-long-last.png";
+import giveUpImg from "@/assets/unit10/give-up.png";
+import turnOffImg from "@/assets/unit10/turn-off.png";
+import waitInLineImg from "@/assets/unit10/wait-in-line.png";
+import bitTooMuchImg from "@/assets/unit10/bit-too-much.png";
 // Unit 11 additions
 import choiceImg from "@/assets/unit11/choice.png";
 import failImg from "@/assets/unit11/fail.png";
