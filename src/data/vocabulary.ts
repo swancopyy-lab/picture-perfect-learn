@@ -112,6 +112,11 @@ import u12SpreadImg from "@/assets/unit12/spread.png";
 import u12SurnameImg from "@/assets/unit12/surname.png";
 import u12TipNounImg from "@/assets/unit12/tip-noun.png";
 import u12TopicImg from "@/assets/unit12/topic.png";
+import u12HostImg from "@/assets/unit12/host.png";
+import benefitImg from "@/assets/unit11/benefit.png";
+import preferenceImg from "@/assets/unit11/preference.png";
+import getChanceImg from "@/assets/unit11/get-chance.png";
+import getCaughtImg from "@/assets/unit11/get-caught.png";
 
 export interface VocabWord {
   id: string;
