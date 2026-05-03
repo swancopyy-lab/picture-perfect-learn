@@ -309,7 +309,7 @@ export const vocabulary: VocabWord[] = [
   // UNIT 11 — Making Choices
   // ============================================================
   { id: "u11-airshow", word: "airshow", type: "noun", meaningEn: "A public display of flying aircraft", meaningAr: "عرض طيران", example: "The airshow was amazing to watch.", image: airshowImg, category: "11 - Making Choices" },
-  { id: "u11-benefit", word: "benefit", type: "noun", meaningEn: "An advantage or good result", meaningAr: "فائدة", example: "Exercise has many health benefits.", image: img("photo-1517836357463-d25dfeac3438"), category: "11 - Making Choices" },
+  { id: "u11-benefit", word: "benefit", type: "noun", meaningEn: "An advantage or good result", meaningAr: "فائدة", example: "Exercise has many health benefits.", image: benefitImg, category: "11 - Making Choices" },
   { id: "u11-choice", word: "choice", type: "noun", meaningEn: "A decision between options", meaningAr: "اختيار", example: "You have to make a choice.", image: choiceImg, category: "11 - Making Choices" },
   { id: "u11-conservationist", word: "conservationist", type: "noun", meaningEn: "Someone who protects nature", meaningAr: "مدافع عن البيئة", example: "She's a famous conservationist.", image: conservationistImg, category: "11 - Making Choices" },
   { id: "u11-environment", word: "environment", type: "noun", meaningEn: "The natural world around us", meaningAr: "البيئة", example: "We must protect the environment.", image: img("photo-1441974231531-c6227db76b6e"), category: "11 - Making Choices" },
