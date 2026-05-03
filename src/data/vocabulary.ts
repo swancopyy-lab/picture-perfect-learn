@@ -260,6 +260,7 @@ export const vocabulary: VocabWord[] = [
   { id: "u9-real-treat", word: "a real treat", type: "expression", meaningEn: "Something especially enjoyable", meaningAr: "شيء ممتع حقاً", example: "Going to the concert was a real treat.", image: realTreatImg, category: "9 - All Kinds of People" },
   { id: "u9-i-mean", word: "I mean", type: "expression", meaningEn: "Used to clarify what was just said", meaningAr: "أقصد / يعني", example: "I mean, it's not that bad.", image: iMeanImg, category: "9 - All Kinds of People" },
   { id: "u9-of-course", word: "Of course", type: "expression", meaningEn: "Certainly; naturally", meaningAr: "بالطبع", example: "Of course I'll help you.", image: ofCourseImg, category: "9 - All Kinds of People" },
+  { id: "u9-in-a-hurry", word: "in a hurry", type: "expression", meaningEn: "Doing something quickly because there's little time", meaningAr: "في عجلة من أمره", example: "Sorry, I'm in a hurry.", image: vec("1774859372787-8bb5ff415c70"), category: "9 - All Kinds of People" },
 
   // ============================================================
   // UNIT 10 — Who Used My Toothpaste?
