@@ -39,7 +39,7 @@ import suggestImg from "@/assets/unit10/suggest.jpg";
 import blowUpImg from "@/assets/unit10/blow-up.png";
 import cleanUpImg from "@/assets/unit10/clean-up.jpg";
 import giveBackImg from "@/assets/unit10/give-back.png";
-import giveUpImg from "@/assets/unit10/give-up.jpg";
+
 import takeOverImg from "@/assets/unit10/take-over.jpg";
 import turnDownImg from "@/assets/unit10/turn-down.jpg";
 import messUpImg from "@/assets/unit10/mess-up.jpg";
