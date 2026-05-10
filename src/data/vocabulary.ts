@@ -121,6 +121,27 @@ import u12SimilarImg from "@/assets/unit12/similar.png";
 import u12TrickyImg from "@/assets/unit12/tricky.png";
 import u12AccidentallyImg from "@/assets/unit12/accidentally.png";
 import u12PatientlyImg from "@/assets/unit12/patiently.png";
+import u12AdvisableImg from "@/assets/unit12/advisable.png";
+import u12GoodIdeaImg from "@/assets/unit12/good-idea.png";
+import u12CommonToImg from "@/assets/unit12/common-to.png";
+import u12NotPoliteImg from "@/assets/unit12/not-polite.png";
+import u12PoliteToImg from "@/assets/unit12/polite-to.png";
+import u12RudeToImg from "@/assets/unit12/rude-to.png";
+import u12WrongToImg from "@/assets/unit12/wrong-to.png";
+import u12BeSureImg from "@/assets/unit12/be-sure.png";
+import u12DontForgetImg from "@/assets/unit12/dont-forget.png";
+import u12MakeSureImg from "@/assets/unit12/make-sure.png";
+import u12RememberToImg from "@/assets/unit12/remember-to.png";
+import u12TryNotToImg from "@/assets/unit12/try-not-to.png";
+import u12TryToImg from "@/assets/unit12/try-to.png";
+import u12BeBasedImg from "@/assets/unit12/be-based.png";
+import u12BeOnTimeImg from "@/assets/unit12/be-on-time.png";
+import u12StandInLineImg from "@/assets/unit12/stand-in-line.png";
+import u12WaitYourTurnImg from "@/assets/unit12/wait-your-turn.png";
+import u12WhatsItLikeImg from "@/assets/unit12/whats-it-like.png";
+import u12KindOfImg from "@/assets/unit12/kind-of.png";
+import u12ToBeHonestImg from "@/assets/unit12/to-be-honest.png";
+import u12GetHangOfImg from "@/assets/unit12/get-hang-of.png";
 import benefitImg from "@/assets/unit11/benefit.png";
 import preferenceImg from "@/assets/unit11/preference.png";
 import getChanceImg from "@/assets/unit11/get-chance.png";
@@ -394,28 +415,28 @@ export const vocabulary: VocabWord[] = [
   { id: "u12-tricky", word: "tricky", type: "adjective", meaningEn: "Difficult to do or deal with", meaningAr: "صعب / معقّد", example: "This question is a bit tricky.", image: u12TrickyImg, category: "12 - Culture Shock" },
   { id: "u12-accidentally", word: "accidentally", type: "adverb", meaningEn: "By accident; not on purpose", meaningAr: "عن طريق الخطأ", example: "I accidentally broke the cup.", image: u12AccidentallyImg, category: "12 - Culture Shock" },
   { id: "u12-patiently", word: "patiently", type: "adverb", meaningEn: "In a calm waiting way", meaningAr: "بصبر", example: "She waited patiently for her turn.", image: u12PatientlyImg, category: "12 - Culture Shock" },
-  { id: "u12-advisable", word: "It's advisable to…", type: "expression", meaningEn: "It is recommended to…", meaningAr: "من المستحسن أن…", example: "It's advisable to book early.", image: img("photo-1517245386807-bb43f82c33c4"), category: "12 - Culture Shock" },
-  { id: "u12-good-idea", word: "It's a good idea to…", type: "expression", meaningEn: "It is wise to…", meaningAr: "من الجيد أن…", example: "It's a good idea to study daily.", image: img("photo-1488998427799-e3362cec87c3"), category: "12 - Culture Shock" },
-  { id: "u12-common-to", word: "It's common to…", type: "expression", meaningEn: "It happens often", meaningAr: "من الشائع أن…", example: "It's common to shake hands here.", image: img("photo-1521791136064-7986c2920216"), category: "12 - Culture Shock" },
-  { id: "u12-not-polite", word: "It's not polite to… / It's impolite to…", type: "expression", meaningEn: "It shows bad manners", meaningAr: "ليس من المؤدب أن…", example: "It's not polite to talk with your mouth full.", image: img("photo-1504593811423-6dd665756598"), category: "12 - Culture Shock" },
-  { id: "u12-polite-to", word: "It's polite to…", type: "expression", meaningEn: "It shows good manners", meaningAr: "من المؤدب أن…", example: "It's polite to say thank you.", image: img("photo-1521791136064-7986c2920216"), category: "12 - Culture Shock" },
-  { id: "u12-rude-to", word: "It's rude to…", type: "expression", meaningEn: "It is impolite to…", meaningAr: "من الوقاحة أن…", example: "It's rude to point at people.", image: img("photo-1504593811423-6dd665756598"), category: "12 - Culture Shock" },
-  { id: "u12-wrong-to", word: "It's wrong to…", type: "expression", meaningEn: "It is morally incorrect", meaningAr: "من الخطأ أن…", example: "It's wrong to lie to your friends.", image: img("photo-1504593811423-6dd665756598"), category: "12 - Culture Shock" },
-  { id: "u12-be-sure", word: "Be sure to…", type: "expression", meaningEn: "Make certain to do…", meaningAr: "تأكد من أن…", example: "Be sure to lock the door.", image: img("photo-1517245386807-bb43f82c33c4"), category: "12 - Culture Shock" },
-  { id: "u12-dont-forget", word: "Don't forget to…", type: "expression", meaningEn: "Remember to do…", meaningAr: "لا تنسَ أن…", example: "Don't forget to call me.", image: img("photo-1495364141860-b0d03eccd065"), category: "12 - Culture Shock" },
-  { id: "u12-make-sure", word: "Make sure to…", type: "expression", meaningEn: "Confirm that you do…", meaningAr: "تأكد من…", example: "Make sure to bring your ID.", image: img("photo-1517245386807-bb43f82c33c4"), category: "12 - Culture Shock" },
-  { id: "u12-remember-to", word: "Remember to…", type: "expression", meaningEn: "Don't forget to do…", meaningAr: "تذكّر أن…", example: "Remember to take your umbrella.", image: img("photo-1495364141860-b0d03eccd065"), category: "12 - Culture Shock" },
-  { id: "u12-try-not-to", word: "Try not to…", type: "expression", meaningEn: "Make an effort to avoid", meaningAr: "حاول ألا…", example: "Try not to be late.", image: img("photo-1518288774672-b94e808873ff"), category: "12 - Culture Shock" },
-  { id: "u12-try-to", word: "Try to…", type: "expression", meaningEn: "Make an effort to do…", meaningAr: "حاول أن…", example: "Try to relax.", image: img("photo-1517245386807-bb43f82c33c4"), category: "12 - Culture Shock" },
-  { id: "u12-be-based", word: "be based", type: "expression", meaningEn: "To have a main location", meaningAr: "يكون مقرّه في", example: "The company is based in Tokyo.", image: img("photo-1451187580459-43490279c0fa"), category: "12 - Culture Shock" },
-  { id: "u12-be-on-time", word: "be on time", type: "expression", meaningEn: "To arrive at the right time", meaningAr: "يحضر في الوقت المحدد", example: "Please be on time tomorrow.", image: img("photo-1495364141860-b0d03eccd065"), category: "12 - Culture Shock" },
-  { id: "u12-stand-in-line", word: "stand in line", type: "expression", meaningEn: "To wait in a queue", meaningAr: "يقف في الصف", example: "We had to stand in line for tickets.", image: img("photo-1556742044-3c52d6e88c62"), category: "12 - Culture Shock" },
-  { id: "u12-wait-your-turn", word: "wait your turn", type: "expression", meaningEn: "To wait until it's your time", meaningAr: "ينتظر دوره", example: "Please wait your turn.", image: img("photo-1493836512294-502baa1986e2"), category: "12 - Culture Shock" },
-  { id: "u12-whats-it-like", word: "What's it like…?", type: "expression", meaningEn: "How is it? Used to ask description", meaningAr: "كيف هو…؟", example: "What's it like living in Japan?", image: img("photo-1528360983277-13d401cdc186"), category: "12 - Culture Shock" },
-  { id: "u12-kind-of", word: "kind of", type: "expression", meaningEn: "Somewhat; a little", meaningAr: "نوعاً ما", example: "I'm kind of tired today.", image: img("photo-1499728603263-13726abce5fd"), category: "12 - Culture Shock" },
+  { id: "u12-advisable", word: "It's advisable to…", type: "expression", meaningEn: "It is recommended to…", meaningAr: "من المستحسن أن…", example: "It's advisable to book early.", image: u12AdvisableImg, category: "12 - Culture Shock" },
+  { id: "u12-good-idea", word: "It's a good idea to…", type: "expression", meaningEn: "It is wise to…", meaningAr: "من الجيد أن…", example: "It's a good idea to study daily.", image: u12GoodIdeaImg, category: "12 - Culture Shock" },
+  { id: "u12-common-to", word: "It's common to…", type: "expression", meaningEn: "It happens often", meaningAr: "من الشائع أن…", example: "It's common to shake hands here.", image: u12CommonToImg, category: "12 - Culture Shock" },
+  { id: "u12-not-polite", word: "It's not polite to… / It's impolite to…", type: "expression", meaningEn: "It shows bad manners", meaningAr: "ليس من المؤدب أن…", example: "It's not polite to talk with your mouth full.", image: u12NotPoliteImg, category: "12 - Culture Shock" },
+  { id: "u12-polite-to", word: "It's polite to…", type: "expression", meaningEn: "It shows good manners", meaningAr: "من المؤدب أن…", example: "It's polite to say thank you.", image: u12PoliteToImg, category: "12 - Culture Shock" },
+  { id: "u12-rude-to", word: "It's rude to…", type: "expression", meaningEn: "It is impolite to…", meaningAr: "من الوقاحة أن…", example: "It's rude to point at people.", image: u12RudeToImg, category: "12 - Culture Shock" },
+  { id: "u12-wrong-to", word: "It's wrong to…", type: "expression", meaningEn: "It is morally incorrect", meaningAr: "من الخطأ أن…", example: "It's wrong to lie to your friends.", image: u12WrongToImg, category: "12 - Culture Shock" },
+  { id: "u12-be-sure", word: "Be sure to…", type: "expression", meaningEn: "Make certain to do…", meaningAr: "تأكد من أن…", example: "Be sure to lock the door.", image: u12BeSureImg, category: "12 - Culture Shock" },
+  { id: "u12-dont-forget", word: "Don't forget to…", type: "expression", meaningEn: "Remember to do…", meaningAr: "لا تنسَ أن…", example: "Don't forget to call me.", image: u12DontForgetImg, category: "12 - Culture Shock" },
+  { id: "u12-make-sure", word: "Make sure to…", type: "expression", meaningEn: "Confirm that you do…", meaningAr: "تأكد من…", example: "Make sure to bring your ID.", image: u12MakeSureImg, category: "12 - Culture Shock" },
+  { id: "u12-remember-to", word: "Remember to…", type: "expression", meaningEn: "Don't forget to do…", meaningAr: "تذكّر أن…", example: "Remember to take your umbrella.", image: u12RememberToImg, category: "12 - Culture Shock" },
+  { id: "u12-try-not-to", word: "Try not to…", type: "expression", meaningEn: "Make an effort to avoid", meaningAr: "حاول ألا…", example: "Try not to be late.", image: u12TryNotToImg, category: "12 - Culture Shock" },
+  { id: "u12-try-to", word: "Try to…", type: "expression", meaningEn: "Make an effort to do…", meaningAr: "حاول أن…", example: "Try to relax.", image: u12TryToImg, category: "12 - Culture Shock" },
+  { id: "u12-be-based", word: "be based", type: "expression", meaningEn: "To have a main location", meaningAr: "يكون مقرّه في", example: "The company is based in Tokyo.", image: u12BeBasedImg, category: "12 - Culture Shock" },
+  { id: "u12-be-on-time", word: "be on time", type: "expression", meaningEn: "To arrive at the right time", meaningAr: "يحضر في الوقت المحدد", example: "Please be on time tomorrow.", image: u12BeOnTimeImg, category: "12 - Culture Shock" },
+  { id: "u12-stand-in-line", word: "stand in line", type: "expression", meaningEn: "To wait in a queue", meaningAr: "يقف في الصف", example: "We had to stand in line for tickets.", image: u12StandInLineImg, category: "12 - Culture Shock" },
+  { id: "u12-wait-your-turn", word: "wait your turn", type: "expression", meaningEn: "To wait until it's your time", meaningAr: "ينتظر دوره", example: "Please wait your turn.", image: u12WaitYourTurnImg, category: "12 - Culture Shock" },
+  { id: "u12-whats-it-like", word: "What's it like…?", type: "expression", meaningEn: "How is it? Used to ask description", meaningAr: "كيف هو…؟", example: "What's it like living in Japan?", image: u12WhatsItLikeImg, category: "12 - Culture Shock" },
+  { id: "u12-kind-of", word: "kind of", type: "expression", meaningEn: "Somewhat; a little", meaningAr: "نوعاً ما", example: "I'm kind of tired today.", image: u12KindOfImg, category: "12 - Culture Shock" },
   { id: "u12-no-kidding", word: "No kidding!", type: "expression", meaningEn: "Really? That's surprising!", meaningAr: "حقاً؟! / لا تمزح!", example: "You won? No kidding!", image: img("photo-1531746020798-e6953c6e8e04"), category: "12 - Culture Shock" },
-  { id: "u12-to-be-honest", word: "to be honest", type: "expression", meaningEn: "Speaking truthfully", meaningAr: "بصراحة", example: "To be honest, I don't like it.", image: img("photo-1521791055366-0d553872125f"), category: "12 - Culture Shock" },
-  { id: "u12-get-hang-of", word: "to get the hang of", type: "expression", meaningEn: "To learn how to do something", meaningAr: "يتقن / يعتاد على", example: "It takes time to get the hang of driving.", image: img("photo-1542362567-b07e54358753"), category: "12 - Culture Shock" },
+  { id: "u12-to-be-honest", word: "to be honest", type: "expression", meaningEn: "Speaking truthfully", meaningAr: "بصراحة", example: "To be honest, I don't like it.", image: u12ToBeHonestImg, category: "12 - Culture Shock" },
+  { id: "u12-get-hang-of", word: "to get the hang of", type: "expression", meaningEn: "To learn how to do something", meaningAr: "يتقن / يعتاد على", example: "It takes time to get the hang of driving.", image: u12GetHangOfImg, category: "12 - Culture Shock" },
 ];
 
 export const categories = Array.from(new Set(vocabulary.map((w) => w.category)));
