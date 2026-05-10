@@ -146,6 +146,10 @@ import benefitImg from "@/assets/unit11/benefit.png";
 import preferenceImg from "@/assets/unit11/preference.png";
 import getChanceImg from "@/assets/unit11/get-chance.png";
 import getCaughtImg from "@/assets/unit11/get-caught.png";
+import u12RushImg from "@/assets/unit12/rush.png";
+import u12AdjustImg from "@/assets/unit12/adjust.png";
+import u12LawyerImg from "@/assets/unit12/lawyer.png";
+import u12NoKiddingImg from "@/assets/unit12/no-kidding.png";
 
 export interface VocabWord {
   id: string;
@@ -382,7 +386,7 @@ export const vocabulary: VocabWord[] = [
   { id: "u12-guest", word: "guest", type: "noun", meaningEn: "A person invited to someone's home", meaningAr: "ضيف", example: "We have guests coming for dinner.", image: u12GuestImg, category: "12 - Culture Shock" },
   { id: "u12-host", word: "host", type: "noun", meaningEn: "A person who receives guests", meaningAr: "مُضيف", example: "She's a wonderful host.", image: u12HostImg, category: "12 - Culture Shock" },
   { id: "u12-impression", word: "impression", type: "noun", meaningEn: "An idea or feeling about someone/something", meaningAr: "انطباع", example: "First impressions are important.", image: u12ImpressionImg, category: "12 - Culture Shock" },
-  { id: "u12-lawyer", word: "lawyer", type: "noun", meaningEn: "A person who practices law", meaningAr: "محامٍ", example: "She wants to be a lawyer.", image: img("photo-1589994965851-a8f479c573a9"), category: "12 - Culture Shock" },
+  { id: "u12-lawyer", word: "lawyer", type: "noun", meaningEn: "A person who practices law", meaningAr: "محامٍ", example: "She wants to be a lawyer.", image: u12LawyerImg, category: "12 - Culture Shock" },
   { id: "u12-mud", word: "mud", type: "noun", meaningEn: "Wet soft earth", meaningAr: "طين / وحل", example: "The kids played in the mud.", image: u12MudImg, category: "12 - Culture Shock" },
   { id: "u12-pocket", word: "pocket", type: "noun", meaningEn: "A small bag sewn into clothing", meaningAr: "جيب", example: "He put the keys in his pocket.", image: u12PocketImg, category: "12 - Culture Shock" },
   { id: "u12-porter", word: "porter", type: "noun", meaningEn: "A person who carries luggage", meaningAr: "حمّال أمتعة", example: "The porter helped us with our bags.", image: u12PorterImg, category: "12 - Culture Shock" },
@@ -390,7 +394,7 @@ export const vocabulary: VocabWord[] = [
   { id: "u12-surname", word: "surname", type: "noun", meaningEn: "Family name; last name", meaningAr: "اسم العائلة", example: "Please write your surname here.", image: u12SurnameImg, category: "12 - Culture Shock" },
   { id: "u12-tip-noun", word: "tip", type: "noun", meaningEn: "Money given for service / helpful advice", meaningAr: "إكرامية / نصيحة", example: "I left a tip for the waiter.", image: u12TipNounImg, category: "12 - Culture Shock" },
   { id: "u12-topic", word: "topic", type: "noun", meaningEn: "A subject discussed", meaningAr: "موضوع للنقاش", example: "Let's change the topic.", image: u12TopicImg, category: "12 - Culture Shock" },
-  { id: "u12-adjust", word: "adjust", type: "verb", meaningEn: "To change to fit a new situation", meaningAr: "يتأقلم / يضبط", example: "It takes time to adjust to a new country.", image: img("photo-1469854523086-cc02fe5d8800"), category: "12 - Culture Shock" },
+  { id: "u12-adjust", word: "adjust", type: "verb", meaningEn: "To change to fit a new situation", meaningAr: "يتأقلم / يضبط", example: "It takes time to adjust to a new country.", image: u12AdjustImg, category: "12 - Culture Shock" },
   { id: "u12-allow", word: "allow", type: "verb", meaningEn: "To give permission", meaningAr: "يسمح", example: "Pets are not allowed here.", image: u12AllowImg, category: "12 - Culture Shock" },
   { id: "u12-block", word: "block", type: "verb", meaningEn: "To stop something from passing", meaningAr: "يسد / يعيق", example: "A car is blocking the road.", image: u12BlockImg, category: "12 - Culture Shock" },
   { id: "u12-bump-into", word: "bump (into)", type: "verb", meaningEn: "To meet someone unexpectedly", meaningAr: "يصادف / يلتقي مصادفة", example: "I bumped into an old friend today.", image: img("photo-1521791136064-7986c2920216"), category: "12 - Culture Shock" },
@@ -401,7 +405,7 @@ export const vocabulary: VocabWord[] = [
   { id: "u12-manage", word: "manage", type: "verb", meaningEn: "To succeed in doing something difficult", meaningAr: "يتدبّر / ينجح في", example: "I managed to finish on time.", image: u12ManageImg, category: "12 - Culture Shock" },
   { id: "u12-remove", word: "remove", type: "verb", meaningEn: "To take away", meaningAr: "يُزيل", example: "Please remove your shoes.", image: u12RemoveImg, category: "12 - Culture Shock" },
   { id: "u12-rest", word: "rest", type: "verb", meaningEn: "To stop activity to relax", meaningAr: "يستريح", example: "You should rest after exercise.", image: u12RestImg, category: "12 - Culture Shock" },
-  { id: "u12-rush", word: "rush", type: "verb", meaningEn: "To do something very quickly", meaningAr: "يُسرع / يستعجل", example: "Don't rush; we have time.", image: img("photo-1518288774672-b94e808873ff"), category: "12 - Culture Shock" },
+  { id: "u12-rush", word: "rush", type: "verb", meaningEn: "To do something very quickly", meaningAr: "يُسرع / يستعجل", example: "Don't rush; we have time.", image: u12RushImg, category: "12 - Culture Shock" },
   { id: "u12-spear", word: "spear", type: "verb", meaningEn: "To pierce with a sharp object", meaningAr: "يطعن بشيء حاد", example: "He speared the food with his fork.", image: u12SpearImg, category: "12 - Culture Shock" },
   { id: "u12-spread", word: "spread", type: "verb", meaningEn: "To extend over an area", meaningAr: "ينتشر / يفرد", example: "News spreads fast online.", image: u12SpreadImg, category: "12 - Culture Shock" },
   { id: "u12-tip-verb", word: "tip", type: "verb", meaningEn: "To give money for a service", meaningAr: "يُعطي إكرامية", example: "Don't forget to tip the waiter.", image: u12TipVerbImg, category: "12 - Culture Shock" },
@@ -434,7 +438,7 @@ export const vocabulary: VocabWord[] = [
   { id: "u12-wait-your-turn", word: "wait your turn", type: "expression", meaningEn: "To wait until it's your time", meaningAr: "ينتظر دوره", example: "Please wait your turn.", image: u12WaitYourTurnImg, category: "12 - Culture Shock" },
   { id: "u12-whats-it-like", word: "What's it like…?", type: "expression", meaningEn: "How is it? Used to ask description", meaningAr: "كيف هو…؟", example: "What's it like living in Japan?", image: u12WhatsItLikeImg, category: "12 - Culture Shock" },
   { id: "u12-kind-of", word: "kind of", type: "expression", meaningEn: "Somewhat; a little", meaningAr: "نوعاً ما", example: "I'm kind of tired today.", image: u12KindOfImg, category: "12 - Culture Shock" },
-  { id: "u12-no-kidding", word: "No kidding!", type: "expression", meaningEn: "Really? That's surprising!", meaningAr: "حقاً؟! / لا تمزح!", example: "You won? No kidding!", image: img("photo-1531746020798-e6953c6e8e04"), category: "12 - Culture Shock" },
+  { id: "u12-no-kidding", word: "No kidding!", type: "expression", meaningEn: "Really? That's surprising!", meaningAr: "حقاً؟! / لا تمزح!", example: "You won? No kidding!", image: u12NoKiddingImg, category: "12 - Culture Shock" },
   { id: "u12-to-be-honest", word: "to be honest", type: "expression", meaningEn: "Speaking truthfully", meaningAr: "بصراحة", example: "To be honest, I don't like it.", image: u12ToBeHonestImg, category: "12 - Culture Shock" },
   { id: "u12-get-hang-of", word: "to get the hang of", type: "expression", meaningEn: "To learn how to do something", meaningAr: "يتقن / يعتاد على", example: "It takes time to get the hang of driving.", image: u12GetHangOfImg, category: "12 - Culture Shock" },
 ];
