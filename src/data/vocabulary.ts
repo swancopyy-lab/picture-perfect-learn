@@ -438,7 +438,7 @@ export const vocabulary: VocabWord[] = [
   { id: "u12-wait-your-turn", word: "wait your turn", type: "expression", meaningEn: "To wait until it's your time", meaningAr: "ينتظر دوره", example: "Please wait your turn.", image: u12WaitYourTurnImg, category: "12 - Culture Shock" },
   { id: "u12-whats-it-like", word: "What's it like…?", type: "expression", meaningEn: "How is it? Used to ask description", meaningAr: "كيف هو…؟", example: "What's it like living in Japan?", image: u12WhatsItLikeImg, category: "12 - Culture Shock" },
   { id: "u12-kind-of", word: "kind of", type: "expression", meaningEn: "Somewhat; a little", meaningAr: "نوعاً ما", example: "I'm kind of tired today.", image: u12KindOfImg, category: "12 - Culture Shock" },
-  { id: "u12-no-kidding", word: "No kidding!", type: "expression", meaningEn: "Really? That's surprising!", meaningAr: "حقاً؟! / لا تمزح!", example: "You won? No kidding!", image: img("photo-1531746020798-e6953c6e8e04"), category: "12 - Culture Shock" },
+  { id: "u12-no-kidding", word: "No kidding!", type: "expression", meaningEn: "Really? That's surprising!", meaningAr: "حقاً؟! / لا تمزح!", example: "You won? No kidding!", image: u12NoKiddingImg, category: "12 - Culture Shock" },
   { id: "u12-to-be-honest", word: "to be honest", type: "expression", meaningEn: "Speaking truthfully", meaningAr: "بصراحة", example: "To be honest, I don't like it.", image: u12ToBeHonestImg, category: "12 - Culture Shock" },
   { id: "u12-get-hang-of", word: "to get the hang of", type: "expression", meaningEn: "To learn how to do something", meaningAr: "يتقن / يعتاد على", example: "It takes time to get the hang of driving.", image: u12GetHangOfImg, category: "12 - Culture Shock" },
 ];
