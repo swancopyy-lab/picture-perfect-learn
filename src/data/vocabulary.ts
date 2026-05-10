@@ -146,6 +146,10 @@ import benefitImg from "@/assets/unit11/benefit.png";
 import preferenceImg from "@/assets/unit11/preference.png";
 import getChanceImg from "@/assets/unit11/get-chance.png";
 import getCaughtImg from "@/assets/unit11/get-caught.png";
+import u12RushImg from "@/assets/unit12/rush.png";
+import u12AdjustImg from "@/assets/unit12/adjust.png";
+import u12LawyerImg from "@/assets/unit12/lawyer.png";
+import u12NoKiddingImg from "@/assets/unit12/no-kidding.png";
 
 export interface VocabWord {
   id: string;
