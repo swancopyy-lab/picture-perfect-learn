@@ -386,7 +386,7 @@ export const vocabulary: VocabWord[] = [
   { id: "u12-guest", word: "guest", type: "noun", meaningEn: "A person invited to someone's home", meaningAr: "ضيف", example: "We have guests coming for dinner.", image: u12GuestImg, category: "12 - Culture Shock" },
   { id: "u12-host", word: "host", type: "noun", meaningEn: "A person who receives guests", meaningAr: "مُضيف", example: "She's a wonderful host.", image: u12HostImg, category: "12 - Culture Shock" },
   { id: "u12-impression", word: "impression", type: "noun", meaningEn: "An idea or feeling about someone/something", meaningAr: "انطباع", example: "First impressions are important.", image: u12ImpressionImg, category: "12 - Culture Shock" },
-  { id: "u12-lawyer", word: "lawyer", type: "noun", meaningEn: "A person who practices law", meaningAr: "محامٍ", example: "She wants to be a lawyer.", image: img("photo-1589994965851-a8f479c573a9"), category: "12 - Culture Shock" },
+  { id: "u12-lawyer", word: "lawyer", type: "noun", meaningEn: "A person who practices law", meaningAr: "محامٍ", example: "She wants to be a lawyer.", image: u12LawyerImg, category: "12 - Culture Shock" },
   { id: "u12-mud", word: "mud", type: "noun", meaningEn: "Wet soft earth", meaningAr: "طين / وحل", example: "The kids played in the mud.", image: u12MudImg, category: "12 - Culture Shock" },
   { id: "u12-pocket", word: "pocket", type: "noun", meaningEn: "A small bag sewn into clothing", meaningAr: "جيب", example: "He put the keys in his pocket.", image: u12PocketImg, category: "12 - Culture Shock" },
   { id: "u12-porter", word: "porter", type: "noun", meaningEn: "A person who carries luggage", meaningAr: "حمّال أمتعة", example: "The porter helped us with our bags.", image: u12PorterImg, category: "12 - Culture Shock" },
