@@ -1,4 +1,5 @@
 import gloveCompartmentImg from "@/assets/glove-compartment.jpg";
+import automaticTransmissionImg from "@/assets/unit12/automatic-transmission.png";
 import gasTankImg from "@/assets/gas-tank.jpg";
 import wellExamImg from "@/assets/well-exam.jpg";
 import selfishImg from "@/assets/unit9/selfish.png";
@@ -209,7 +210,7 @@ export const vocabulary: VocabWord[] = [
   // ============================================================
   // UNIT 8 — Drive Slowly!
   // ============================================================
-  { id: "u8-automatic-transmission", word: "automatic transmission", type: "noun", meaningEn: "A gear system that shifts on its own", meaningAr: "ناقل حركة أوتوماتيكي", example: "Most new cars have automatic transmission.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Kia_Opirus_Automatic_Transmission_Shifter.JPG/640px-Kia_Opirus_Automatic_Transmission_Shifter.JPG", category: "8 - Drive Slowly!" },
+  { id: "u8-automatic-transmission", word: "automatic transmission", type: "noun", meaningEn: "A gear system that shifts on its own", meaningAr: "ناقل حركة أوتوماتيكي", example: "Most new cars have automatic transmission.", image: automaticTransmissionImg, category: "8 - Drive Slowly!" },
   { id: "u8-brake-pedal", word: "brake pedal", type: "noun", meaningEn: "Pedal pressed to slow or stop a car", meaningAr: "دواسة الفرامل", example: "Press the brake pedal slowly.", image: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Saabsonettpedals.jpg", category: "8 - Drive Slowly!" },
   { id: "u8-bumper", word: "bumper", type: "noun", meaningEn: "Bar at the front/back of a car for protection", meaningAr: "صادم / مصدّ السيارة", example: "The bumper protects the car in small accidents.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/1976_AMC_Matador_coupe_cocoa_fl-bu.jpg/960px-1976_AMC_Matador_coupe_cocoa_fl-bu.jpg", category: "8 - Drive Slowly!" },
   { id: "u8-dashboard", word: "dashboard", type: "noun", meaningEn: "Panel with controls in front of the driver", meaningAr: "لوحة القيادة", example: "The fuel light on the dashboard is on.", image: img("photo-1615517331072-da8aab44f923"), category: "8 - Drive Slowly!" },
